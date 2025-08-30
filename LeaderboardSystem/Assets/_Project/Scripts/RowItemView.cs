@@ -11,10 +11,10 @@ public class RowItemView : MonoBehaviour
     [Header("Highlight")]
     [SerializeField] private Renderer highlightRenderer;
 
-    //// Satýr yüksekliðini Controller’a bildirmek istersen:
-    //[Header("Layout")]
-    //[SerializeField] private float rowHeight = 1.0f;
-    //public float RowHeight => rowHeight;
+    // Satýr yüksekliðini Controller’a bildirmek istersen:
+    [Header("Layout")]
+    [SerializeField] private float rowHeight = 1.0f;
+    public float RowHeight => rowHeight;
 
 
     // Cache
