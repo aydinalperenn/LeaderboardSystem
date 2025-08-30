@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: LeaderboardConfig
   m_EditorClassIdentifier: 
   maxVisibleRows: 25
-  meCenterOffset: 0
+  meCenterOffset: 1
   rowItemPrefab: {fileID: 0}
   rowMoveDuration: 0.35
   containerMoveDuration: 0.45
+  rowEase: 9
+  containerEase: 10
   defaultJson: {fileID: 4900000, guid: 204cb4e5e067d5045a9dab92e8ae3992, type: 3}

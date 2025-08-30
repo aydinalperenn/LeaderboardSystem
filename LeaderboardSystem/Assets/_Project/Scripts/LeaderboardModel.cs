@@ -50,6 +50,57 @@ public class LeaderboardModel
 
     }
 
+    public void RandomBumpScoresSymmetric(System.Random rng, int minDelta = 5, int maxDelta = 50, float changeChance = 0.4f)
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            if (rng.NextDouble() <= changeChance)
+            {
+                int delta = rng.Next(minDelta, maxDelta + 1);
+
+                // Yönü rastgele seç (+/-)
+                if (rng.Next(0, 2) == 0) delta = -delta;
+
+                int newScore = players[i].score + delta;
+                if (newScore < 0) newScore = 0; // negatif olmasýn
+                players[i].score = newScore;
+            }
+        }
+        RecalculateRanks();
+    }
+    public void RandomBumpScoresWithJumps(System.Random rng)
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            // Deðiþecek mi? (hemen herkes deðiþsin istiyorsan bu oraný 0.8–1.0 yap)
+            if (rng.NextDouble() <= 0.85f)
+            {
+                bool bigJump = rng.NextDouble() < 0.30f; // %30 büyük sýçrama
+                int minDelta = bigJump ? 200 : 10;
+                int maxDelta = bigJump ? 600 : 60;
+
+                int delta = rng.Next(minDelta, maxDelta + 1);
+                if (rng.Next(0, 2) == 0) delta = -delta; // yön (±)
+
+                int newScore = players[i].score + delta;
+                if (newScore < 0) newScore = 0;
+                players[i].score = newScore;
+            }
+        }
+        RecalculateRanks();
+    }
+
+    // Alternatif “tamamen karýþtýr” modu — herkesin skorunu baþtan daðýtýr.
+    // Büyük sýçrama garantili görünür.
+    public void RandomizeAllScores(System.Random rng, int minScore = 500, int maxScore = 5000)
+    {
+        for (int i = 0; i < players.Count; i++)
+            players[i].score = rng.Next(minScore, maxScore + 1);
+
+        RecalculateRanks();
+    }
+
+
     /// Skorlarý rasgele artýrmak için (update butonu simülasyonu – görsel kýsým sonra)
     public void RandomBumpScores(System.Random rng, int minDelta = 5, int maxDelta = 50, float bumpChance = 0.4f)
     {
