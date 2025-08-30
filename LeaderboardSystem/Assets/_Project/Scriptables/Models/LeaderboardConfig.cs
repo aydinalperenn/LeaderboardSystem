@@ -21,11 +21,11 @@ public class LeaderboardConfig : ScriptableObject
     [Tooltip("Container hareket süresi (saniye)")]
     public float containerMoveDuration = 0.45f;
 
-    //[Tooltip("Satýrlarýn DOTween easing tipi")]
-    //public DG.Tweening.Ease rowEase = DG.Tweening.Ease.OutCubic;
+    [Tooltip("Satýrlarýn DOTween easing tipi")]
+    public DG.Tweening.Ease rowEase = DG.Tweening.Ease.OutCubic;
 
-    //[Tooltip("Container DOTween easing tipi")]
-    //public DG.Tweening.Ease containerEase = DG.Tweening.Ease.InOutCubic;
+    [Tooltip("Container DOTween easing tipi")]
+    public DG.Tweening.Ease containerEase = DG.Tweening.Ease.InOutCubic;
 
     [Header("Data (dev/test)")]
     [Tooltip("Varsayýlan JSON dosyasý (test için)")]
