@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d07895d00d9bd54ba0a5eff103b5830, type: 3}
+  m_Name: LeaderboardConfig
+  m_EditorClassIdentifier: 
+  maxVisibleRows: 25
+  meCenterOffset: 0
+  rowItemPrefab: {fileID: 0}
+  rowMoveDuration: 0.35
+  containerMoveDuration: 0.45
+  defaultJson: {fileID: 4900000, guid: 204cb4e5e067d5045a9dab92e8ae3992, type: 3}
