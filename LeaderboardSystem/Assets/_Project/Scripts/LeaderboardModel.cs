@@ -41,9 +41,9 @@ public class LeaderboardModel
     /// Me’yi kesin deðiþtir + diðerlerini olasýlýkla ± deðiþtir; sonra yeniden sýrala.
     public void RandomBumpIncludingMe(
         Random rng,
-        int meMin = 10, int meMax = 40,
+        int meMin = 5, int meMax = 50,
         int otherMin = 5, int otherMax = 50,
-        float changeChance = 0.4f)
+        float changeChance = 1f)
     {
         // Diðerleri
         for (int i = 0; i < players.Count; i++)

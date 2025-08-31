@@ -16,7 +16,7 @@ MonoBehaviour:
   meCenterOffset: 1
   rowItemPrefab: {fileID: 0}
   rowMoveDuration: 0.75
-  containerMoveDuration: 1
+  containerMoveDuration: 1.25
   rowEase: 9
   containerEase: 10
   defaultJson: {fileID: 4900000, guid: 204cb4e5e067d5045a9dab92e8ae3992, type: 3}

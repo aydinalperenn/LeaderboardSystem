@@ -99,6 +99,7 @@ public class LeaderboardController : MonoBehaviour
         return rowsContainer.GetChild(i).GetComponent<RowItemView>();
     }
 
+
     private void BindWindow(bool animated, bool skipMeDuringAnimation = false)
     {
         int vis = VisibleNow();
@@ -183,7 +184,7 @@ public class LeaderboardController : MonoBehaviour
 
         // (B) Modeli güncelle (Me dahil)
         System.Random rng = new System.Random();
-        model.RandomBumpIncludingMe(rng, meMin: 5, meMax: 50, otherMin: 5, otherMax: 50, changeChance: 2f);
+        model.RandomBumpIncludingMe(rng, meMin: 5, meMax: 50, otherMin: 5, otherMax: 50, changeChance: 1f);
 
         // (C) Yeni deðerler
         int meNewScore = model.Me != null ? model.Me.score : meOldScore;
@@ -277,10 +278,14 @@ public class LeaderboardController : MonoBehaviour
             v.transform.DOKill(complete);
             if (v.isMe)
                 v.KillLabelTweens(complete);
+
+            //  Bu view'a baðlý gecikmeli görünürlük iþleri varsa iptal et
+            DOTween.Kill(v, complete);
         }
 
         DOTween.Kill(REBIND_DELAY_ID, complete);
     }
+
 
     /// Animasyon baþlamadan, hedef pencereye göre içerikleri bind et ve
     /// her satýrýn baþlangýç Y'sini ayarla.
@@ -291,6 +296,11 @@ public class LeaderboardController : MonoBehaviour
     private void PrebindWindowForAnimation(int newTop, int deltaRows)
     {
         int vis = VisibleNow();
+
+        // Me'nin hedef slotu ve çakýþan slot indeksi
+        int jMe = model.MeIndex - newTop;
+        int jOverlap = jMe + deltaRows; // prebind anýnda Me'nin altýna "oturan" slot
+
         for (int j = 0; j < vis; j++)
         {
             int dataIndex = newTop + j;
@@ -303,26 +313,35 @@ public class LeaderboardController : MonoBehaviour
             }
 
             var data = model.Players[dataIndex];
-            bool isMe = data.id == "me";
+            bool isMe = (data.id == "me");
 
             view.gameObject.SetActive(true);
             view.Bind(data, isMe);
 
-            // Baþlangýç pozisyonu:
-            float startY;
-            if (isMe)
+            float startY = isMe
+                ? -(j * rowHeight)                 // Me sabit: hedef yerine koy
+                : -((j - deltaRows) * rowHeight);  // Non-Me: offsetli baþla
+
+            view.SnapTo(startY);
+
+            //  ÇAKIÞMA: Bu slot, prebind anýnda Me'nin hedef Y'sinde baþlýyor mu?
+            // Evet ise 1 sn görünmez kalsýn, sonra aç.
+            if (!isMe && j == jOverlap && jOverlap >= 0 && jOverlap < vis)
             {
-                // Me ekranda sabit: hedef slotunun tam yerine koy
-                startY = -(j * rowHeight);
+                view.SetAlpha(0f);
+                // 1 sn sonra görünür yap (bu delayed iþleme view'ý target veriyoruz ki kill'lenebilsin)
+                DOVirtual.DelayedCall(0.45f, () =>
+                {
+                    if (view != null) view.SetAlpha(1f);
+                }).SetTarget(view);
             }
             else
             {
-                // Diðerleri: animasyonla -j*rowHeight'e kayacak þekilde offsetli baþlat
-                startY = -((j - deltaRows) * rowHeight);
+                view.SetAlpha(1f);
             }
-            view.SnapTo(startY);
         }
     }
+
 
 
 }

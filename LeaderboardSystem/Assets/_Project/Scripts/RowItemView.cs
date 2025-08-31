@@ -105,5 +105,15 @@ public class RowItemView : MonoBehaviour
     {
         SetLocalY(targetY);
     }
+
+    
+    public void SetAlpha(float a)
+    {
+        if (rankText) rankText.color = SetA(rankText.color, a);
+        if (nicknameText) nicknameText.color = SetA(nicknameText.color, a);
+        if (scoreText) scoreText.color = SetA(scoreText.color, a);
+    }
+    static Color SetA(Color c, float a) { c.a = a; return c; }
+
 }
 
