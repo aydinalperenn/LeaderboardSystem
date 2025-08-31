@@ -7,6 +7,7 @@ public class RowItemView : MonoBehaviour
     [SerializeField] private TMP_Text rankText;
     [SerializeField] private TMP_Text nicknameText;
     [SerializeField] private TMP_Text scoreText;
+    public bool isMe { get; private set; }
 
     [Header("Highlight")]
     [SerializeField] private Renderer highlightRenderer;
@@ -46,19 +47,15 @@ public class RowItemView : MonoBehaviour
     {
         if (data == null) return;
 
-        // Rank / Nick / Score
         if (rankText != null) rankText.text = data.rank.ToString();
         if (nicknameText != null) nicknameText.text = data.nickname;
-
         if (scoreText != null)
-        {
-            scoreText.text = data.score.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);  // binlik ayýrýcý gösterimi
-        }
+            scoreText.text = data.score.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
 
         if (highlightRenderer != null)
-        {
             highlightRenderer.enabled = isMe;
-        }
+
+        this.isMe = isMe;  
     }
 
     /// Satýrý anýnda yeni pozisyona taþýr (DOTween kullanmadan).

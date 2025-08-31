@@ -155,60 +155,107 @@ public class LeaderboardController : MonoBehaviour
         return Mathf.Clamp(idealTop, 0, Mathf.Max(0, total - maxVisible));
     }
 
-    // ---------- Animasyon (activeRows yok; pool + children) ----------
-    public void SimulateRandomUpdateAnimated()
+
+    private RowItemView FindMeViewInChildren()
     {
         int vis = VisibleNow();
-        if (model.MeIndex < 0 || vis == 0) return;
-
-        // Eski görünürlerin sözlüðü: PlayerID -> RowItemView
-        var idToView = new Dictionary<string, RowItemView>();
-        int oldTop = topIndex;
         for (int i = 0; i < vis; i++)
         {
-            int dataIndex = oldTop + i;
-            if (dataIndex < 0 || dataIndex >= model.Players.Count) continue;
-            string id = model.Players[dataIndex].id;
-            idToView[id] = GetViewAt(i);
+            var view = GetViewAt(i);
+            if (view != null && view.isMe)
+                return view;
         }
-
-        // Modeli güncelle (örnek: büyük sýçramalar)
-        System.Random rng = new System.Random();
-        model.RandomBumpScoresWithJumps(rng);
-
-        Debug.Log($"[Leaderboard] After update: Me new rank = {model.Me?.rank}");
-
-        // Yeni pencere baþlangýcý
-        topIndex = ComputeTopIndex(model.MeIndex, model.Players.Count, config.maxVisibleRows);
-
-        int newVisible = Mathf.Min(config.maxVisibleRows, model.Players.Count);
-        float duration = config.rowMoveDuration;
-
-        CenterOnMe(true);
-
-        var seq = DOTween.Sequence();
-
-        // Eski görünür id varsa, mevcut view’ý hedef slot Y’sine tween’le
-        for (int i = 0; i < newVisible && i < vis; i++)
-        {
-            int newDataIndex = topIndex + i;
-            if (newDataIndex < 0 || newDataIndex >= model.Players.Count) continue;
-
-            var pdata = model.Players[newDataIndex];
-            string id = pdata.id;
-            float targetY = -(i * rowHeight);
-
-            if (idToView.TryGetValue(id, out RowItemView view))
-            {
-                seq.Join(view.transform.DOLocalMoveY(targetY, duration).SetEase(config.rowEase));
-            }
-        }
-
-        // Bittiðinde kesin bind + hizalama
-        seq.OnComplete(() =>
-        {
-            BindWindow(false);
-            CenterOnMe(true);
-        });
+        return null;
     }
+
+    private float ComputeContainerYFor(int topIdx)
+    {
+        // Me her zaman merkezde dursun istiyoruz: container Y’sini
+        // "meCenterOffset + (MeIndex - topIdx) * rowHeight" formülüyle hesaplýyoruz.
+        float centerY = config.meCenterOffset;
+        return centerY + (model.MeIndex - topIdx) * rowHeight;
+    }
+
+    public void SimulateRandomUpdateAnimated()
+    {
+        if (rowsContainer == null || config == null) return;
+
+        // 1) Eski durum
+        int oldMeIndex = model.MeIndex;
+        int oldTop = topIndex;
+
+        // 2) Skorlarý güncelle (hemen rebind etme!)
+        System.Random rng = new System.Random();
+        model.RandomBumpScores(rng, 5, 50, 0.4f);
+
+        // 3) Yeni durum
+        int newMeIndex = model.MeIndex;
+        int newTop = ComputeTopIndex(newMeIndex, model.Players.Count, config.maxVisibleRows);
+
+        // Me'nin kaç sýra hareket ettiðini bul (pozitif => Me yukarý çýktý)
+        int deltaRows = oldMeIndex - newMeIndex;
+
+        // Container’ý oynatmýyoruz; Me’yi de oynatmayacaðýz.
+        // Diðer tüm satýrlarý delta kadar KAYDIRACAÐIZ.
+        // Eksen: row 0: y=0, row 1: y=-rowHeight ... Aþaðý = negatif Y.
+        // Me yukarý çýktýysa (deltaRows>0) diðerleri aþaðý kaymalý => shift = -deltaRows * rowHeight
+        float shift = -deltaRows * rowHeight;
+
+        // 0 hareket varsa, büyük kaydýrma yok. Küçük bir "pulse" ve gecikmeli bind yapalým ki pat pat olmasýn.
+        if (deltaRows == 0)
+        {
+            var meView = FindMeViewInChildren(); // önceki mesajda verdiðim yardýmcý
+            if (meView != null)
+                meView.transform.DOPunchScale(Vector3.one * 0.05f, 0.25f, 6, 0.5f);
+
+            // Minik gecikmeden sonra rebind; istersen bu gecikmeyi 0 yapabilirsin.
+            DOTween.Sequence()
+                   .AppendInterval(0.20f)
+                   .OnComplete(() => { topIndex = newTop; BindWindow(false); });
+            return;
+        }
+
+        // 4) Görünen satýrlarý animasyonla kaydýr
+        int vis = VisibleNow();
+        var seq = DOTween.Sequence();
+        bool anyTween = false;
+
+        for (int i = 0; i < vis; i++)
+        {
+            var view = GetViewAt(i);
+            if (view == null) continue;
+
+            // Var olan tweenleri öldür ki üst üste binmesin
+            view.transform.DOKill(false);
+
+            // Me sabit kalsýn, KESÝNLÝKLE tween'leme
+            if (view.isMe) continue;
+
+            float y0 = view.transform.localPosition.y;
+            seq.Join(
+                view.transform
+                    .DOLocalMoveY(y0 + shift, config.containerMoveDuration)
+                    .SetEase(config.containerEase)
+            );
+            anyTween = true;
+        }
+
+        // 5) Animasyon bittikten sonra yeni pencereyi baðla ve slotlara oturt
+        if (anyTween)
+        {
+            seq.OnComplete(() =>
+            {
+                topIndex = newTop;      // Yeni pencere aralýðýný uygula
+                BindWindow(false);      // Her satýrý -i*rowHeight'e snap et + yeni veriyi bas
+                                        // DÝKKAT: rowsContainer'ý HÝÇ oynatmadýk; Me zaten merkezde kalýyor.
+            });
+        }
+        else
+        {
+            // Görünürde yalnýzca Me varsa vb. (edge-case)
+            topIndex = newTop;
+            BindWindow(false);
+        }
+    }
+
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
-public class RowItemPool : MonoBehaviour
+public class RowItemPool
 {
     private Stack<RowItemView> pool;
     private RowItemView prefab;
