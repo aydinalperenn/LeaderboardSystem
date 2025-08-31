@@ -173,53 +173,48 @@ public class LeaderboardController : MonoBehaviour
     {
         if (rowsContainer == null || config == null) return;
 
-        // aktif animasyonlarý/iplikleri durdur
         if (_animSeq != null && _animSeq.IsActive()) _animSeq.Kill(false);
         KillAllRowTweens(false);
 
-        // --- (A) Me'nin eski deðerlerini al
+        // (A) Eski deðerler (Me score/rank tween'i için)
         int meOldScore = model.Me != null ? model.Me.score : 0;
         int meOldRank = model.Me != null ? model.Me.rank : 0;
-
-        // Eski me index/top
         int oldMeIndex = model.MeIndex;
-        int oldTop = topIndex;
 
-        // --- (B) Modeli güncelle (Me dahil)
+        // (B) Modeli güncelle (Me dahil)
         System.Random rng = new System.Random();
-        model.RandomBumpIncludingMe(rng, meMin: 10, meMax: 40, otherMin: 5, otherMax: 50, changeChance: 0.4f);
+        model.RandomBumpIncludingMe(rng, meMin: 5, meMax: 50, otherMin: 5, otherMax: 50, changeChance: 2f);
 
-        // --- (C) Yeni deðerler
+        // (C) Yeni deðerler
         int meNewScore = model.Me != null ? model.Me.score : meOldScore;
         int meNewRank = model.Me != null ? model.Me.rank : meOldRank;
-
         int newMeIndex = model.MeIndex;
+
         int newTop = ComputeTopIndex(newMeIndex, model.Players.Count, config.maxVisibleRows);
+        int deltaRows = oldMeIndex - newMeIndex;                 // + ise Me yukarý çýktý
+        float shift = -deltaRows * rowHeight;                  // diðerleri bu kadar kayacak
 
-        int deltaRows = oldMeIndex - newMeIndex;
-        float shift = -deltaRows * rowHeight;
+        //  ÖNCE ÝÇERÝÐÝ GÜNCELLE + BAÞLANGIÇ POZÝSYONLARINI AYARLA
+        PrebindWindowForAnimation(newTop, deltaRows);
 
-        // --- (D) Me view'ýný bul ve label tweenlerini baþlat
+        // (D) Me view’ýný bul ve label tween (score/rank) baþlat
         var meView = FindMeViewInChildren();
         if (meView != null)
         {
-            meView.KillLabelTweens(false); // spam týklama güvenliði
+            meView.KillLabelTweens(false);
             float dur = Mathf.Max(0.01f, config.containerMoveDuration);
             var ease = config.containerEase;
-
-            // Rank ve score'ý ayný sürede tween'le
             meView.AnimateRankInt(meOldRank, meNewRank, dur, ease);
             meView.AnimateScoreInt(meOldScore, meNewScore, dur, ease);
         }
 
+        // (E) Diðer satýrlarý shift kadar tween’le (Me sabit)
         int vis = VisibleNow();
         bool anyTween = false;
         _animSeq = DOTween.Sequence();
 
         if (deltaRows == 0)
         {
-            // Sýra deðiþmiyorsa da label tweenler zaten baþladý; ufak bir geri bildirim verip
-            // küçük gecikmeden sonra rebind et
             if (meView != null)
                 meView.transform.DOPunchScale(Vector3.one * 0.06f, 0.25f, 6, 0.5f);
 
@@ -230,22 +225,21 @@ public class LeaderboardController : MonoBehaviour
                    .OnComplete(() =>
                    {
                        topIndex = newTop;
-                       BindWindow(false); // final deðerler zaten modelde - yazýlar uygun
+                       BindWindow(false); // içerik zaten doðru, bu sadece garanti snap
                    });
             return;
         }
 
-        // --- (E) Diðer tüm satýrlarý shift kadar kaydýr (Me hariç)
-        for (int i = 0; i < vis; i++)
+        for (int j = 0; j < vis; j++)
         {
-            var view = GetViewAt(i);
+            var view = GetViewAt(j);
             if (view == null) continue;
-            if (view.isMe) continue;
+            if (view.isMe) continue; // Me tweenlenmiyor
 
-            float y0 = view.transform.localPosition.y;
+            float endY = -(j * rowHeight); // hedef slotun tam yeri
             _animSeq.Join(
                 view.transform
-                    .DOLocalMoveY(y0 + shift, config.containerMoveDuration)
+                    .DOLocalMoveY(endY, config.containerMoveDuration)
                     .SetEase(config.containerEase)
             );
             anyTween = true;
@@ -256,7 +250,7 @@ public class LeaderboardController : MonoBehaviour
             _animSeq.OnComplete(() =>
             {
                 topIndex = newTop;
-                BindWindow(false); // final snap & bind
+                BindWindow(false); // tek seferde snap/garanti
                 _animSeq = null;
             });
         }
@@ -267,6 +261,7 @@ public class LeaderboardController : MonoBehaviour
             _animSeq = null;
         }
     }
+
 
 
 
@@ -287,6 +282,47 @@ public class LeaderboardController : MonoBehaviour
         DOTween.Kill(REBIND_DELAY_ID, complete);
     }
 
+    /// Animasyon baþlamadan, hedef pencereye göre içerikleri bind et ve
+    /// her satýrýn baþlangýç Y'sini ayarla.
+    /// j: 0..vis-1 hedef slot indeksi
+    /// dataIndex: newTop + j
+    /// Non-Me satýrlar startY = -(j - deltaRows)*rowHeight  (shift ile -j*rowHeight'e oturacak)
+    /// Me satýrý startY = -j*rowHeight  (sabit kalýyor, tween'lenmiyor)
+    private void PrebindWindowForAnimation(int newTop, int deltaRows)
+    {
+        int vis = VisibleNow();
+        for (int j = 0; j < vis; j++)
+        {
+            int dataIndex = newTop + j;
+            var view = GetViewAt(j);
+
+            if (dataIndex < 0 || dataIndex >= model.Players.Count)
+            {
+                view.gameObject.SetActive(false);
+                continue;
+            }
+
+            var data = model.Players[dataIndex];
+            bool isMe = data.id == "me";
+
+            view.gameObject.SetActive(true);
+            view.Bind(data, isMe);
+
+            // Baþlangýç pozisyonu:
+            float startY;
+            if (isMe)
+            {
+                // Me ekranda sabit: hedef slotunun tam yerine koy
+                startY = -(j * rowHeight);
+            }
+            else
+            {
+                // Diðerleri: animasyonla -j*rowHeight'e kayacak þekilde offsetli baþlat
+                startY = -((j - deltaRows) * rowHeight);
+            }
+            view.SnapTo(startY);
+        }
+    }
 
 
 }
