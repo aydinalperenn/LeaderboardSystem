@@ -177,20 +177,40 @@ public class LeaderboardController : MonoBehaviour
         if (_animSeq != null && _animSeq.IsActive()) _animSeq.Kill(false);
         KillAllRowTweens(false);
 
-        // Eski durum
+        // --- (A) Me'nin eski deðerlerini al
+        int meOldScore = model.Me != null ? model.Me.score : 0;
+        int meOldRank = model.Me != null ? model.Me.rank : 0;
+
+        // Eski me index/top
         int oldMeIndex = model.MeIndex;
         int oldTop = topIndex;
 
-        // --- FÝX: RNG oluþtur ve modele ver ---
+        // --- (B) Modeli güncelle (Me dahil)
         System.Random rng = new System.Random();
         model.RandomBumpIncludingMe(rng, meMin: 10, meMax: 40, otherMin: 5, otherMax: 50, changeChance: 0.4f);
 
-        // Yeni durum
+        // --- (C) Yeni deðerler
+        int meNewScore = model.Me != null ? model.Me.score : meOldScore;
+        int meNewRank = model.Me != null ? model.Me.rank : meOldRank;
+
         int newMeIndex = model.MeIndex;
         int newTop = ComputeTopIndex(newMeIndex, model.Players.Count, config.maxVisibleRows);
 
         int deltaRows = oldMeIndex - newMeIndex;
         float shift = -deltaRows * rowHeight;
+
+        // --- (D) Me view'ýný bul ve label tweenlerini baþlat
+        var meView = FindMeViewInChildren();
+        if (meView != null)
+        {
+            meView.KillLabelTweens(false); // spam týklama güvenliði
+            float dur = Mathf.Max(0.01f, config.containerMoveDuration);
+            var ease = config.containerEase;
+
+            // Rank ve score'ý ayný sürede tween'le
+            meView.AnimateRankInt(meOldRank, meNewRank, dur, ease);
+            meView.AnimateScoreInt(meOldScore, meNewScore, dur, ease);
+        }
 
         int vis = VisibleNow();
         bool anyTween = false;
@@ -198,27 +218,28 @@ public class LeaderboardController : MonoBehaviour
 
         if (deltaRows == 0)
         {
-            var meView = FindMeViewInChildren();
+            // Sýra deðiþmiyorsa da label tweenler zaten baþladý; ufak bir geri bildirim verip
+            // küçük gecikmeden sonra rebind et
             if (meView != null)
                 meView.transform.DOPunchScale(Vector3.one * 0.06f, 0.25f, 6, 0.5f);
 
             DOTween.Kill(REBIND_DELAY_ID, false);
             DOTween.Sequence()
                    .SetId(REBIND_DELAY_ID)
-                   .AppendInterval(0.20f)
+                   .AppendInterval(Mathf.Max(0.18f, config.containerMoveDuration * 0.5f))
                    .OnComplete(() =>
                    {
                        topIndex = newTop;
-                       BindWindow(false);
+                       BindWindow(false); // final deðerler zaten modelde - yazýlar uygun
                    });
             return;
         }
 
+        // --- (E) Diðer tüm satýrlarý shift kadar kaydýr (Me hariç)
         for (int i = 0; i < vis; i++)
         {
             var view = GetViewAt(i);
             if (view == null) continue;
-            // --- FÝX: IsMe kullan ---
             if (view.isMe) continue;
 
             float y0 = view.transform.localPosition.y;
@@ -235,7 +256,7 @@ public class LeaderboardController : MonoBehaviour
             _animSeq.OnComplete(() =>
             {
                 topIndex = newTop;
-                BindWindow(false);
+                BindWindow(false); // final snap & bind
                 _animSeq = null;
             });
         }
@@ -249,6 +270,7 @@ public class LeaderboardController : MonoBehaviour
 
 
 
+
     private void KillAllRowTweens(bool complete = false)
     {
         int vis = VisibleNow();
@@ -256,12 +278,15 @@ public class LeaderboardController : MonoBehaviour
         {
             var v = GetViewAt(i);
             if (v == null) continue;
-            v.transform.DOKill(complete);  // complete=false: kaldýðý yerde dursun
+
+            v.transform.DOKill(complete);
+            if (v.isMe)
+                v.KillLabelTweens(complete);
         }
 
-        // Eski rebind gecikmelerini de iptal et
         DOTween.Kill(REBIND_DELAY_ID, complete);
     }
+
 
 
 }
