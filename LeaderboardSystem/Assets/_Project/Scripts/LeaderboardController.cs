@@ -19,11 +19,9 @@ public class LeaderboardController : MonoBehaviour
     private ILeaderboardDataSource dataSource;
 
     private RowItemPool pool;
-    private List<RowItemView> activeRows = new List<RowItemView>();
     private int topIndex = 0;
     private int visibleCount { get { return Mathf.Min(config.maxVisibleRows, model.Players.Count); } }
     private float rowHeight = 1.0f;
-
 
     void Awake()
     {
@@ -52,19 +50,18 @@ public class LeaderboardController : MonoBehaviour
         }
 
         rowHeight = rowPrefab.RowHeight;
-        
-        pool = new RowItemPool(rowPrefab, rowsContainer, visibleCount);
-        SpawnInitialRows();
+
+        // SADECE POOL KULLAN
+        pool = new RowItemPool(rowPrefab, rowsContainer, prewarm: visibleCount);
+        SpawnInitialRows(); // pool.Get ile çocuklarý oluþtur + hizala
 
         topIndex = ComputeTopIndex(model.MeIndex, model.Players.Count, config.maxVisibleRows);
         BindWindow(false);
         CenterOnMe(false);
-
     }
 
     public void SimulateRandomUpdate()
     {
-
         System.Random rng = new System.Random();
         model.RandomBumpScores(rng, 5, 50, 0.4f);
 
@@ -75,49 +72,65 @@ public class LeaderboardController : MonoBehaviour
         CenterOnMe(true);
     }
 
-
-    // ---------- View yardýmcýlarý ----------
+    // ---------- View yardýmcýlarý (activeRows YOK) ----------
 
     private void SpawnInitialRows()
     {
-        for (int i = 0; i < visibleCount; i++)
+        // Gerekli sayýda child yoksa pool’dan al ve rowsContainer altýna koy
+        int need = visibleCount - rowsContainer.childCount;
+        for (int i = 0; i < need; i++)
         {
             var item = pool.Get();
-            activeRows.Add(item);
-
-            float y = -(i * rowHeight);
-            item.SnapTo(y);
+            if (item.transform.parent != rowsContainer)
+                item.transform.SetParent(rowsContainer, worldPositionStays: false);
+            item.gameObject.SetActive(true);
         }
+
+        // Slotlara diz
+        int childCount = VisibleNow();
+        for (int i = 0; i < childCount; i++)
+        {
+            var view = GetViewAt(i);
+            float y = -(i * rowHeight);
+            view.SnapTo(y);
+        }
+    }
+
+    private int VisibleNow()
+    {
+        return Mathf.Min(visibleCount, rowsContainer.childCount);
+    }
+
+    private RowItemView GetViewAt(int i)
+    {
+        return rowsContainer.GetChild(i).GetComponent<RowItemView>();
     }
 
     private void BindWindow(bool animated, bool skipMeDuringAnimation = false)
     {
-        for (int i = 0; i < activeRows.Count; i++)
+        int vis = VisibleNow();
+        for (int i = 0; i < vis; i++)
         {
             int dataIndex = topIndex + i;
+            var view = GetViewAt(i);
+
             if (dataIndex < 0 || dataIndex >= model.Players.Count)
             {
-                activeRows[i].gameObject.SetActive(false);
+                view.gameObject.SetActive(false);
                 continue;
             }
 
             var data = model.Players[dataIndex];
             bool isMe = data.id == "me";
-
-            // Eðer Me tween sýrasýnda hareket ediyorsa, bind iþlemini atla
             if (skipMeDuringAnimation && isMe) continue;
 
-            activeRows[i].gameObject.SetActive(true);
-            activeRows[i].Bind(data, isMe);
+            view.gameObject.SetActive(true);
+            view.Bind(data, isMe);
 
             float targetY = -(i * rowHeight);
-            if (animated)
-                activeRows[i].SnapTo(targetY); // þimdilik anýnda hizalama
-            else
-                activeRows[i].SnapTo(targetY);
+            view.SnapTo(targetY); // þimdilik anýnda hizalama
         }
     }
-
 
     private void CenterOnMe(bool animated)
     {
@@ -137,50 +150,46 @@ public class LeaderboardController : MonoBehaviour
 
     private int ComputeTopIndex(int meIndex, int total, int maxVisible)
     {
-        // Me’yi pencerenin ortasýna yakýn tutmak için üst baþlangýcý
-        int half = (maxVisible - 1) / 2;            // tam ortalama (tek sayýda kusursuz)
+        int half = (maxVisible - 1) / 2;
         int idealTop = meIndex - half;
         return Mathf.Clamp(idealTop, 0, Mathf.Max(0, total - maxVisible));
     }
 
+    // ---------- Animasyon (activeRows yok; pool + children) ----------
     public void SimulateRandomUpdateAnimated()
     {
-        if (model.MeIndex < 0 || activeRows.Count == 0) return;
+        int vis = VisibleNow();
+        if (model.MeIndex < 0 || vis == 0) return;
 
-        // 0) Eski pencerenin sözlüðü: PlayerID -> RowItemView
-        //    (Sadece ekranda olanlar)
+        // Eski görünürlerin sözlüðü: PlayerID -> RowItemView
         var idToView = new Dictionary<string, RowItemView>();
         int oldTop = topIndex;
-        for (int i = 0; i < activeRows.Count; i++)
+        for (int i = 0; i < vis; i++)
         {
             int dataIndex = oldTop + i;
             if (dataIndex < 0 || dataIndex >= model.Players.Count) continue;
             string id = model.Players[dataIndex].id;
-            idToView[id] = activeRows[i];
+            idToView[id] = GetViewAt(i);
         }
 
-        // 1) MODELÝ GÜNCELLE — Artýk büyük sýçramalar da mümkün
+        // Modeli güncelle (örnek: büyük sýçramalar)
         System.Random rng = new System.Random();
         model.RandomBumpScoresWithJumps(rng);
-        // veya: model.RandomizeAllScores(rng);
 
         Debug.Log($"[Leaderboard] After update: Me new rank = {model.Me?.rank}");
 
-        // 2) Yeni pencere baþlangýcýný hesapla (Me merkeze yakýn dursun)
+        // Yeni pencere baþlangýcý
         topIndex = ComputeTopIndex(model.MeIndex, model.Players.Count, config.maxVisibleRows);
 
-        // 3) Her yeni görünür slot için hedef Y'yi hesapla ve varsa eski view'u oraya tween'le
-        //    (Yoksa þimdilik finalize'a býrakýyoruz; finalize'da zaten doðru bind olacak)
         int newVisible = Mathf.Min(config.maxVisibleRows, model.Players.Count);
         float duration = config.rowMoveDuration;
 
-        // Container'ý DA hemen tween'lemeye baþla ki arka plan da akarken Me ile birlikte kayýyor görünsün
         CenterOnMe(true);
 
-        // Ayný anda çalýþacak tweenleri bir Sequence ile toplayalým (tamamý bitince finalize)
         var seq = DOTween.Sequence();
 
-        for (int i = 0; i < newVisible; i++)
+        // Eski görünür id varsa, mevcut view’ý hedef slot Y’sine tween’le
+        for (int i = 0; i < newVisible && i < vis; i++)
         {
             int newDataIndex = topIndex + i;
             if (newDataIndex < 0 || newDataIndex >= model.Players.Count) continue;
@@ -189,27 +198,17 @@ public class LeaderboardController : MonoBehaviour
             string id = pdata.id;
             float targetY = -(i * rowHeight);
 
-            // Eski pencerede görünüyorsa: o satýrý hedef Y'ye taþý
             if (idToView.TryGetValue(id, out RowItemView view))
             {
-                // Bind'ý finalize'da yapacaðýz; þimdilik sadece hareket ettiriyoruz
                 seq.Join(view.transform.DOLocalMoveY(targetY, duration).SetEase(config.rowEase));
             }
-            // Eski pencerede görünmüyorsa: (yeni giren oyuncu)
-            // Bu durumda tween için elde view yok; finalize'da doðru yerde spawn/bind olacak.
         }
 
-        // 4) Me özel bir þey yapmaya gerek yok; yukarýdaki döngü zaten Me'yi de yeni yerine taþýdý.
-        //    (Me eskiden görünürde deðilse, finalize'da pencerede yerini alacak.)
-
-        // 5) Tüm tweenler bitince finalize: herkesi yeni sýraya bind et (metin/highlight güncel)
+        // Bittiðinde kesin bind + hizalama
         seq.OnComplete(() =>
         {
-            BindWindow(false);   // Her oyuncu doðru view'a baðlansýn
-            CenterOnMe(true);    // Bir kez daha merkezle (ince düzeltme; istersen kaldýrabilirsin)
+            BindWindow(false);
+            CenterOnMe(true);
         });
     }
-
-
-
 }
