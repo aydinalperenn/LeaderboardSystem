@@ -7,119 +7,66 @@ public class LeaderboardModel
     private PlayerData me;
     private int meIndex = -1;
 
+    // Dýþ eriþimler
+    public List<PlayerData> Players => players;
+    public PlayerData Me => me;
+    public int MeIndex => meIndex;
 
+    // ----------------- Kurulum -----------------
     public void SetData(PlayerList list)
     {
-        if (list != null && list.players != null)
-        {
-            players = list.players;
-        }
-        else
-        {
-            players = new List<PlayerData>();
-        }
-
-        RecalculateRanks();
+        players = (list != null && list.players != null) ? list.players : new List<PlayerData>();
+        ResortAndRerank();
     }
 
-    public void RecalculateRanks()
+    // ----------------- Sýralama / Rank -----------------
+    /// Skora göre (DESC) sýralar; eþitlikte id (ASC). Rank atar, Me/MeIndex günceller.
+    public void ResortAndRerank()
     {
-        // Score DESC, eger skor esitse id'ye gore siraliyor
         players.Sort((a, b) =>
         {
-            int cmp = b.score.CompareTo(a.score);
+            int cmp = b.score.CompareTo(a.score);  // DESC
             if (cmp != 0) return cmp;
-            return string.Compare(a.id, b.id, StringComparison.Ordinal);
+            return string.Compare(a.id, b.id, StringComparison.Ordinal); // eþitlik kýrýcý
         });
 
         for (int i = 0; i < players.Count; i++)
-        {
             players[i].rank = i + 1;
-        }
 
         meIndex = players.FindIndex(p => p.id == "me");
-
-        if (meIndex >= 0)
-        {
-            me = players[meIndex];
-        }
-        else
-        {
-            me = null;
-        }
-
+        me = (meIndex >= 0) ? players[meIndex] : null;
     }
 
-    public void RandomBumpScoresSymmetric(System.Random rng, int minDelta = 5, int maxDelta = 50, float changeChance = 0.4f)
+    // ----------------- Skor Güncelleme -----------------
+    /// Me’yi kesin deðiþtir + diðerlerini olasýlýkla ± deðiþtir; sonra yeniden sýrala.
+    public void RandomBumpIncludingMe(
+        Random rng,
+        int meMin = 10, int meMax = 40,
+        int otherMin = 5, int otherMax = 50,
+        float changeChance = 0.4f)
     {
+        // Diðerleri
         for (int i = 0; i < players.Count; i++)
         {
+            var p = players[i];
+            if (p.id == "me") continue;
+
             if (rng.NextDouble() <= changeChance)
             {
-                int delta = rng.Next(minDelta, maxDelta + 1);
-
-                // Yönü rastgele seç (+/-)
-                if (rng.Next(0, 2) == 0) delta = -delta;
-
-                int newScore = players[i].score + delta;
-                if (newScore < 0) newScore = 0; // negatif olmasýn
-                players[i].score = newScore;
+                int d = rng.Next(otherMin, otherMax + 1);
+                if (rng.Next(0, 2) == 0) d = -d; // ± yön
+                p.score = Math.Max(0, p.score + d);
             }
         }
-        RecalculateRanks();
-    }
-    public void RandomBumpScoresWithJumps(System.Random rng)
-    {
-        for (int i = 0; i < players.Count; i++)
+
+        // Me – kesin deðiþsin
+        if (me != null)
         {
-            // Deðiþecek mi? (hemen herkes deðiþsin istiyorsan bu oraný 0.8–1.0 yap)
-            if (rng.NextDouble() <= 0.85f)
-            {
-                bool bigJump = rng.NextDouble() < 0.30f; // %30 büyük sýçrama
-                int minDelta = bigJump ? 200 : 10;
-                int maxDelta = bigJump ? 600 : 60;
-
-                int delta = rng.Next(minDelta, maxDelta + 1);
-                if (rng.Next(0, 2) == 0) delta = -delta; // yön (±)
-
-                int newScore = players[i].score + delta;
-                if (newScore < 0) newScore = 0;
-                players[i].score = newScore;
-            }
+            int d = rng.Next(meMin, meMax + 1);
+            if (rng.Next(0, 2) == 0) d = -d;
+            me.score = Math.Max(0, me.score + d);
         }
-        RecalculateRanks();
+
+        ResortAndRerank();
     }
-
-    // Alternatif “tamamen karýþtýr” modu — herkesin skorunu baþtan daðýtýr.
-    // Büyük sýçrama garantili görünür.
-    public void RandomizeAllScores(System.Random rng, int minScore = 500, int maxScore = 5000)
-    {
-        for (int i = 0; i < players.Count; i++)
-            players[i].score = rng.Next(minScore, maxScore + 1);
-
-        RecalculateRanks();
-    }
-
-
-    /// Skorlarý rasgele artýrmak için (update butonu simülasyonu – görsel kýsým sonra)
-    public void RandomBumpScores(System.Random rng, int minDelta = 5, int maxDelta = 50, float bumpChance = 0.4f)
-    {
-        for (int i = 0; i < players.Count; i++)
-        {
-            if (players[i].id == "me") continue; // “me”’nin görseli animasyonla taþýnacak; sayý sonra güncellenecek
-            if (rng.NextDouble() <= bumpChance)
-                players[i].score += rng.Next(minDelta, maxDelta + 1);
-        }
-        // Me’nin gerçek skoru da deðiþebilir ama ekranda anlýk göstermeyeceðiz; 
-        // istersen burada da deðeri güncelleyip sadece view’da geç göstermeyi tercih edebilirsin.
-        RecalculateRanks();
-    }
-
-
-
-    public List<PlayerData> Players {get { return players; }}
-
-    public PlayerData Me{get { return me; } }
-
-    public int MeIndex{get { return meIndex; }}
 }
