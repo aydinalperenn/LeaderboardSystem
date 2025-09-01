@@ -1,0 +1,5004 @@
+{
+  "players": [
+    {
+      "id": "user_001",
+      "nickname": "IvoryGriffin",
+      "score": 3060
+    },
+    {
+      "id": "user_002",
+      "nickname": "GoldenHarbinger",
+      "score": 4988
+    },
+    {
+      "id": "user_003",
+      "nickname": "NimbleDragon",
+      "score": 2067
+    },
+    {
+      "id": "user_004",
+      "nickname": "DeltaVoyager",
+      "score": 1572
+    },
+    {
+      "id": "user_005",
+      "nickname": "CopperGriffin",
+      "score": 1109
+    },
+    {
+      "id": "user_006",
+      "nickname": "AlphaSailor",
+      "score": 4571
+    },
+    {
+      "id": "user_007",
+      "nickname": "NovaGuardian",
+      "score": 3713
+    },
+    {
+      "id": "user_008",
+      "nickname": "WildMonk",
+      "score": 2078
+    },
+    {
+      "id": "user_009",
+      "nickname": "VioletWolf",
+      "score": 1933
+    },
+    {
+      "id": "user_010",
+      "nickname": "ProtoPhantom",
+      "score": 2970
+    },
+    {
+      "id": "user_011",
+      "nickname": "VortexSmith",
+      "score": 3807
+    },
+    {
+      "id": "user_012",
+      "nickname": "QuantumHermit",
+      "score": 2846
+    },
+    {
+      "id": "user_013",
+      "nickname": "PolarKing",
+      "score": 2708
+    },
+    {
+      "id": "user_014",
+      "nickname": "OmegaTiger",
+      "score": 2899
+    },
+    {
+      "id": "user_015",
+      "nickname": "OmegaSage",
+      "score": 3260
+    },
+    {
+      "id": "user_016",
+      "nickname": "ShadowCourier",
+      "score": 1552
+    },
+    {
+      "id": "user_017",
+      "nickname": "CrimsonSmith",
+      "score": 4075
+    },
+    {
+      "id": "user_018",
+      "nickname": "WildGuardian",
+      "score": 2581
+    },
+    {
+      "id": "user_019",
+      "nickname": "GlacierEmpress",
+      "score": 1432
+    },
+    {
+      "id": "user_020",
+      "nickname": "GoldenBear",
+      "score": 3459
+    },
+    {
+      "id": "user_021",
+      "nickname": "PluckyHydra",
+      "score": 4752
+    },
+    {
+      "id": "user_022",
+      "nickname": "SavageNomad",
+      "score": 2216
+    },
+    {
+      "id": "user_023",
+      "nickname": "BrittleGolem",
+      "score": 4799
+    },
+    {
+      "id": "user_024",
+      "nickname": "ScarletSentinel",
+      "score": 1581
+    },
+    {
+      "id": "user_025",
+      "nickname": "TranquilSentinel",
+      "score": 3260
+    },
+    {
+      "id": "user_026",
+      "nickname": "FlamingScholar",
+      "score": 1106
+    },
+    {
+      "id": "user_027",
+      "nickname": "TitanNinja",
+      "score": 3925
+    },
+    {
+      "id": "user_028",
+      "nickname": "WildFox",
+      "score": 1442
+    },
+    {
+      "id": "user_029",
+      "nickname": "SwiftSamurai",
+      "score": 1258
+    },
+    {
+      "id": "user_030",
+      "nickname": "ZenGriffin",
+      "score": 3539
+    },
+    {
+      "id": "user_031",
+      "nickname": "ZenPhantom",
+      "score": 3650
+    },
+    {
+      "id": "user_032",
+      "nickname": "TitanReaper",
+      "score": 4357
+    },
+    {
+      "id": "user_033",
+      "nickname": "GlacierSpecter",
+      "score": 4212
+    },
+    {
+      "id": "user_034",
+      "nickname": "ArcaneHawk",
+      "score": 1787
+    },
+    {
+      "id": "user_035",
+      "nickname": "RogueFalcon",
+      "score": 2657
+    },
+    {
+      "id": "user_036",
+      "nickname": "AzureRaven",
+      "score": 893
+    },
+    {
+      "id": "user_037",
+      "nickname": "BetaEmpress",
+      "score": 3933
+    },
+    {
+      "id": "user_038",
+      "nickname": "ZestyMustang",
+      "score": 1243
+    },
+    {
+      "id": "user_039",
+      "nickname": "DawnGuardian",
+      "score": 3296
+    },
+    {
+      "id": "user_040",
+      "nickname": "VortexMonk",
+      "score": 1137
+    },
+    {
+      "id": "user_041",
+      "nickname": "PolarNomad",
+      "score": 3415
+    },
+    {
+      "id": "user_042",
+      "nickname": "RoyalProphet",
+      "score": 2025
+    },
+    {
+      "id": "user_043",
+      "nickname": "FrostKing",
+      "score": 3477
+    },
+    {
+      "id": "user_044",
+      "nickname": "ThunderAssassin",
+      "score": 4915
+    },
+    {
+      "id": "user_045",
+      "nickname": "PrimeRonin",
+      "score": 2608
+    },
+    {
+      "id": "user_046",
+      "nickname": "AzureLeopard",
+      "score": 2054
+    },
+    {
+      "id": "user_047",
+      "nickname": "RoyalFalcon",
+      "score": 1213
+    },
+    {
+      "id": "user_048",
+      "nickname": "InfernoWolf",
+      "score": 4018
+    },
+    {
+      "id": "user_049",
+      "nickname": "TranquilVoyager",
+      "score": 4450
+    },
+    {
+      "id": "user_050",
+      "nickname": "BoldHarbinger",
+      "score": 4934
+    },
+    {
+      "id": "user_051",
+      "nickname": "SolarOracle",
+      "score": 1537
+    },
+    {
+      "id": "user_052",
+      "nickname": "NightGolem",
+      "score": 2619
+    },
+    {
+      "id": "user_053",
+      "nickname": "TranquilEngineer",
+      "score": 4338
+    },
+    {
+      "id": "user_054",
+      "nickname": "ZenNomad",
+      "score": 3173
+    },
+    {
+      "id": "user_055",
+      "nickname": "EchoTitan",
+      "score": 4030
+    },
+    {
+      "id": "user_056",
+      "nickname": "StealthTemplar",
+      "score": 2012
+    },
+    {
+      "id": "user_057",
+      "nickname": "BriskCheetah",
+      "score": 1882
+    },
+    {
+      "id": "user_058",
+      "nickname": "FrostSkipper",
+      "score": 3553
+    },
+    {
+      "id": "user_059",
+      "nickname": "MythicReaper",
+      "score": 1476
+    },
+    {
+      "id": "user_060",
+      "nickname": "DeltaEagle",
+      "score": 4698
+    },
+    {
+      "id": "user_061",
+      "nickname": "DeltaKnight",
+      "score": 1203
+    },
+    {
+      "id": "user_062",
+      "nickname": "PluckyAlchemist",
+      "score": 4070
+    },
+    {
+      "id": "user_063",
+      "nickname": "AlphaKing",
+      "score": 2950
+    },
+    {
+      "id": "user_064",
+      "nickname": "CuriousAssassin",
+      "score": 1496
+    },
+    {
+      "id": "user_065",
+      "nickname": "AmberWarlock",
+      "score": 4064
+    },
+    {
+      "id": "user_066",
+      "nickname": "AlphaMiner",
+      "score": 4910
+    },
+    {
+      "id": "user_067",
+      "nickname": "WickedMage",
+      "score": 4359
+    },
+    {
+      "id": "user_068",
+      "nickname": "FlamingHermit",
+      "score": 1868
+    },
+    {
+      "id": "user_069",
+      "nickname": "NimbleSamurai",
+      "score": 1904
+    },
+    {
+      "id": "user_070",
+      "nickname": "OmegaOracle",
+      "score": 4739
+    },
+    {
+      "id": "user_071",
+      "nickname": "StormSmith",
+      "score": 2422
+    },
+    {
+      "id": "user_072",
+      "nickname": "OnyxRaven",
+      "score": 4796
+    },
+    {
+      "id": "user_073",
+      "nickname": "OnyxGriffin",
+      "score": 4038
+    },
+    {
+      "id": "user_074",
+      "nickname": "SolarBerserker",
+      "score": 2406
+    },
+    {
+      "id": "user_075",
+      "nickname": "StoutSeeker",
+      "score": 2817
+    },
+    {
+      "id": "user_076",
+      "nickname": "LunarAlchemist",
+      "score": 2785
+    },
+    {
+      "id": "user_077",
+      "nickname": "StealthSkipper",
+      "score": 1386
+    },
+    {
+      "id": "user_078",
+      "nickname": "NightBear",
+      "score": 2981
+    },
+    {
+      "id": "user_079",
+      "nickname": "RoyalWarlock",
+      "score": 4323
+    },
+    {
+      "id": "user_080",
+      "nickname": "RadiantHarbinger",
+      "score": 3449
+    },
+    {
+      "id": "user_081",
+      "nickname": "StormGriffin",
+      "score": 1533
+    },
+    {
+      "id": "user_082",
+      "nickname": "PhantomAssassin",
+      "score": 1721
+    },
+    {
+      "id": "user_083",
+      "nickname": "OmegaArtisan",
+      "score": 4188
+    },
+    {
+      "id": "user_084",
+      "nickname": "CrimsonJester",
+      "score": 4269
+    },
+    {
+      "id": "user_085",
+      "nickname": "TranquilGolem",
+      "score": 3792
+    },
+    {
+      "id": "user_086",
+      "nickname": "FrostDragon",
+      "score": 3653
+    },
+    {
+      "id": "user_087",
+      "nickname": "LunarWarlock",
+      "score": 2360
+    },
+    {
+      "id": "user_088",
+      "nickname": "TitanMage",
+      "score": 3427
+    },
+    {
+      "id": "user_089",
+      "nickname": "VioletCourier",
+      "score": 3622
+    },
+    {
+      "id": "user_090",
+      "nickname": "VioletSpecter",
+      "score": 998
+    },
+    {
+      "id": "user_091",
+      "nickname": "MistyTitan",
+      "score": 3297
+    },
+    {
+      "id": "user_092",
+      "nickname": "GallantBerserker",
+      "score": 2186
+    },
+    {
+      "id": "user_093",
+      "nickname": "EmeraldEagle",
+      "score": 3664
+    },
+    {
+      "id": "user_094",
+      "nickname": "NexusSmith",
+      "score": 4422
+    },
+    {
+      "id": "user_095",
+      "nickname": "AlphaRanger",
+      "score": 1994
+    },
+    {
+      "id": "user_096",
+      "nickname": "ScarletGuardian",
+      "score": 4408
+    },
+    {
+      "id": "user_097",
+      "nickname": "VortexQueen",
+      "score": 1167
+    },
+    {
+      "id": "user_098",
+      "nickname": "SolarSamurai",
+      "score": 2712
+    },
+    {
+      "id": "user_099",
+      "nickname": "WildTiger",
+      "score": 2435
+    },
+    {
+      "id": "user_100",
+      "nickname": "QuantumCobra",
+      "score": 3862
+    },
+    {
+      "id": "user_101",
+      "nickname": "RoyalPanther",
+      "score": 2077
+    },
+    {
+      "id": "user_102",
+      "nickname": "DuskEmpress",
+      "score": 1502
+    },
+    {
+      "id": "user_103",
+      "nickname": "StormJaguar",
+      "score": 1720
+    },
+    {
+      "id": "user_104",
+      "nickname": "EmeraldHawk",
+      "score": 1246
+    },
+    {
+      "id": "user_105",
+      "nickname": "NeonVoyager",
+      "score": 2791
+    },
+    {
+      "id": "user_106",
+      "nickname": "QuantumGuardian",
+      "score": 2009
+    },
+    {
+      "id": "user_107",
+      "nickname": "BrightViper",
+      "score": 3156
+    },
+    {
+      "id": "user_108",
+      "nickname": "SolarHermit",
+      "score": 912
+    },
+    {
+      "id": "user_109",
+      "nickname": "ZestyPanther",
+      "score": 3612
+    },
+    {
+      "id": "user_110",
+      "nickname": "NightBerserker",
+      "score": 1711
+    },
+    {
+      "id": "user_111",
+      "nickname": "ArcaneBadger",
+      "score": 3299
+    },
+    {
+      "id": "user_112",
+      "nickname": "BetaEngineer",
+      "score": 4486
+    },
+    {
+      "id": "user_113",
+      "nickname": "CrimsonJaguar",
+      "score": 4659
+    },
+    {
+      "id": "user_114",
+      "nickname": "ShadowSentinel",
+      "score": 986
+    },
+    {
+      "id": "user_115",
+      "nickname": "EmeraldMonk",
+      "score": 3518
+    },
+    {
+      "id": "user_116",
+      "nickname": "CopperCobra",
+      "score": 2512
+    },
+    {
+      "id": "user_117",
+      "nickname": "WildJaguar",
+      "score": 2535
+    },
+    {
+      "id": "user_118",
+      "nickname": "PolarJaguar",
+      "score": 2469
+    },
+    {
+      "id": "user_119",
+      "nickname": "SwiftPrince",
+      "score": 2918
+    },
+    {
+      "id": "user_120",
+      "nickname": "TranquilPilot",
+      "score": 4756
+    },
+    {
+      "id": "user_121",
+      "nickname": "CosmicLynx",
+      "score": 1957
+    },
+    {
+      "id": "user_122",
+      "nickname": "ZestyRanger",
+      "score": 950
+    },
+    {
+      "id": "user_123",
+      "nickname": "ProtoHydra",
+      "score": 3885
+    },
+    {
+      "id": "user_124",
+      "nickname": "EmeraldPhoenix",
+      "score": 1156
+    },
+    {
+      "id": "user_125",
+      "nickname": "NeonPhoenix",
+      "score": 2892
+    },
+    {
+      "id": "user_126",
+      "nickname": "RapidHarbinger",
+      "score": 2195
+    },
+    {
+      "id": "user_127",
+      "nickname": "TranquilCobra",
+      "score": 1292
+    },
+    {
+      "id": "user_128",
+      "nickname": "GlacierWraith",
+      "score": 3126
+    },
+    {
+      "id": "user_129",
+      "nickname": "OmegaHermit",
+      "score": 2444
+    },
+    {
+      "id": "user_130",
+      "nickname": "EmeraldTitan",
+      "score": 3022
+    },
+    {
+      "id": "user_131",
+      "nickname": "RapidCourier",
+      "score": 1234
+    },
+    {
+      "id": "user_132",
+      "nickname": "ObsidianWolf",
+      "score": 4608
+    },
+    {
+      "id": "user_133",
+      "nickname": "NeonJester",
+      "score": 868
+    },
+    {
+      "id": "user_134",
+      "nickname": "FrostPhantom",
+      "score": 1345
+    },
+    {
+      "id": "user_135",
+      "nickname": "PluckyQueen",
+      "score": 3983
+    },
+    {
+      "id": "user_136",
+      "nickname": "CosmicDruid",
+      "score": 3022
+    },
+    {
+      "id": "user_137",
+      "nickname": "SavageGolem",
+      "score": 3750
+    },
+    {
+      "id": "user_138",
+      "nickname": "DuskPhoenix",
+      "score": 1683
+    },
+    {
+      "id": "user_139",
+      "nickname": "TitanBard",
+      "score": 956
+    },
+    {
+      "id": "user_140",
+      "nickname": "GhostAssassin",
+      "score": 3196
+    },
+    {
+      "id": "user_141",
+      "nickname": "EmeraldNomad",
+      "score": 3966
+    },
+    {
+      "id": "user_142",
+      "nickname": "ScarletMage",
+      "score": 2693
+    },
+    {
+      "id": "user_143",
+      "nickname": "WittyArtisan",
+      "score": 3918
+    },
+    {
+      "id": "user_144",
+      "nickname": "RoyalTitan",
+      "score": 4965
+    },
+    {
+      "id": "user_145",
+      "nickname": "NightDragon",
+      "score": 1615
+    },
+    {
+      "id": "user_146",
+      "nickname": "EagerBear",
+      "score": 3384
+    },
+    {
+      "id": "user_147",
+      "nickname": "RadiantMage",
+      "score": 4770
+    },
+    {
+      "id": "user_148",
+      "nickname": "QuantumOtter",
+      "score": 1521
+    },
+    {
+      "id": "user_149",
+      "nickname": "HollowProphet",
+      "score": 2327
+    },
+    {
+      "id": "user_150",
+      "nickname": "ZenScribe",
+      "score": 2429
+    },
+    {
+      "id": "user_151",
+      "nickname": "AlphaArtisan",
+      "score": 4901
+    },
+    {
+      "id": "user_152",
+      "nickname": "SlyHermit",
+      "score": 4551
+    },
+    {
+      "id": "user_153",
+      "nickname": "CuriousBaron",
+      "score": 976
+    },
+    {
+      "id": "user_154",
+      "nickname": "IronMonk",
+      "score": 1125
+    },
+    {
+      "id": "user_155",
+      "nickname": "RapidCheetah",
+      "score": 2826
+    },
+    {
+      "id": "user_156",
+      "nickname": "NightHydra",
+      "score": 3297
+    },
+    {
+      "id": "user_157",
+      "nickname": "SwiftWolf",
+      "score": 3532
+    },
+    {
+      "id": "user_158",
+      "nickname": "AzureHermit",
+      "score": 4813
+    },
+    {
+      "id": "user_159",
+      "nickname": "SolarDuke",
+      "score": 4022
+    },
+    {
+      "id": "user_160",
+      "nickname": "EmeraldBerserker",
+      "score": 2086
+    },
+    {
+      "id": "user_161",
+      "nickname": "BoldBasilisk",
+      "score": 950
+    },
+    {
+      "id": "user_162",
+      "nickname": "TurboDragon",
+      "score": 3640
+    },
+    {
+      "id": "user_163",
+      "nickname": "CrimsonArcher",
+      "score": 3682
+    },
+    {
+      "id": "user_164",
+      "nickname": "BrittleCobra",
+      "score": 3711
+    },
+    {
+      "id": "user_165",
+      "nickname": "CobaltFalcon",
+      "score": 3276
+    },
+    {
+      "id": "user_166",
+      "nickname": "SwiftCourier",
+      "score": 2734
+    },
+    {
+      "id": "user_167",
+      "nickname": "BoldPaladin",
+      "score": 4906
+    },
+    {
+      "id": "user_168",
+      "nickname": "PluckyBasilisk",
+      "score": 3059
+    },
+    {
+      "id": "user_169",
+      "nickname": "NeonSage",
+      "score": 1307
+    },
+    {
+      "id": "user_170",
+      "nickname": "RadiantWarlock",
+      "score": 2910
+    },
+    {
+      "id": "user_171",
+      "nickname": "WickedQueen",
+      "score": 3971
+    },
+    {
+      "id": "user_172",
+      "nickname": "SilentMiner",
+      "score": 1041
+    },
+    {
+      "id": "user_173",
+      "nickname": "CrystalBard",
+      "score": 3095
+    },
+    {
+      "id": "user_174",
+      "nickname": "DeltaCoyote",
+      "score": 2647
+    },
+    {
+      "id": "user_175",
+      "nickname": "ArcaneWraith",
+      "score": 2042
+    },
+    {
+      "id": "user_176",
+      "nickname": "NexusNomad",
+      "score": 3599
+    },
+    {
+      "id": "user_177",
+      "nickname": "PluckyHawk",
+      "score": 4018
+    },
+    {
+      "id": "user_178",
+      "nickname": "OmegaBear",
+      "score": 1924
+    },
+    {
+      "id": "user_179",
+      "nickname": "CopperProphet",
+      "score": 1519
+    },
+    {
+      "id": "user_180",
+      "nickname": "AlphaWarlock",
+      "score": 3931
+    },
+    {
+      "id": "user_181",
+      "nickname": "OnyxKraken",
+      "score": 2663
+    },
+    {
+      "id": "user_182",
+      "nickname": "ProtoMiner",
+      "score": 4218
+    },
+    {
+      "id": "user_183",
+      "nickname": "AzureBaron",
+      "score": 2769
+    },
+    {
+      "id": "user_184",
+      "nickname": "TitanMantis",
+      "score": 2051
+    },
+    {
+      "id": "user_185",
+      "nickname": "BlazingCourier",
+      "score": 4293
+    },
+    {
+      "id": "user_186",
+      "nickname": "CopperScholar",
+      "score": 3359
+    },
+    {
+      "id": "user_187",
+      "nickname": "BrittleHarbinger",
+      "score": 3497
+    },
+    {
+      "id": "user_188",
+      "nickname": "NexusSailor",
+      "score": 4479
+    },
+    {
+      "id": "user_189",
+      "nickname": "GhostPrince",
+      "score": 1879
+    },
+    {
+      "id": "user_190",
+      "nickname": "StoutOracle",
+      "score": 2493
+    },
+    {
+      "id": "user_191",
+      "nickname": "GoldenGuardian",
+      "score": 1935
+    },
+    {
+      "id": "user_192",
+      "nickname": "NeonHawk",
+      "score": 2457
+    },
+    {
+      "id": "user_193",
+      "nickname": "StoutBadger",
+      "score": 1931
+    },
+    {
+      "id": "user_194",
+      "nickname": "PrimeMustang",
+      "score": 3331
+    },
+    {
+      "id": "user_195",
+      "nickname": "BrightPilot",
+      "score": 1907
+    },
+    {
+      "id": "user_196",
+      "nickname": "AzureAlchemist",
+      "score": 4323
+    },
+    {
+      "id": "user_197",
+      "nickname": "NeonGriffin",
+      "score": 1989
+    },
+    {
+      "id": "user_198",
+      "nickname": "InfernoSentinel",
+      "score": 2094
+    },
+    {
+      "id": "user_199",
+      "nickname": "MythicCourier",
+      "score": 3400
+    },
+    {
+      "id": "user_200",
+      "nickname": "CobaltGriffin",
+      "score": 1355
+    },
+    {
+      "id": "user_201",
+      "nickname": "HollowRonin",
+      "score": 1769
+    },
+    {
+      "id": "user_202",
+      "nickname": "HollowOtter",
+      "score": 2308
+    },
+    {
+      "id": "user_203",
+      "nickname": "AzureSamurai",
+      "score": 3401
+    },
+    {
+      "id": "user_204",
+      "nickname": "BrittleShark",
+      "score": 1992
+    },
+    {
+      "id": "user_205",
+      "nickname": "VelvetNomad",
+      "score": 1041
+    },
+    {
+      "id": "user_206",
+      "nickname": "GlacierOracle",
+      "score": 3410
+    },
+    {
+      "id": "user_207",
+      "nickname": "LunarFalcon",
+      "score": 4191
+    },
+    {
+      "id": "user_208",
+      "nickname": "FlamingEagle",
+      "score": 4168
+    },
+    {
+      "id": "user_209",
+      "nickname": "VioletBaron",
+      "score": 3285
+    },
+    {
+      "id": "user_210",
+      "nickname": "CobaltSmith",
+      "score": 4429
+    },
+    {
+      "id": "user_211",
+      "nickname": "RadiantWraith",
+      "score": 3042
+    },
+    {
+      "id": "user_212",
+      "nickname": "CopperKnight",
+      "score": 2044
+    },
+    {
+      "id": "user_213",
+      "nickname": "PhantomScribe",
+      "score": 2339
+    },
+    {
+      "id": "user_214",
+      "nickname": "AmberPanther",
+      "score": 1674
+    },
+    {
+      "id": "user_215",
+      "nickname": "DeltaSmith",
+      "score": 1877
+    },
+    {
+      "id": "user_216",
+      "nickname": "BrittleDragon",
+      "score": 2313
+    },
+    {
+      "id": "user_217",
+      "nickname": "GallantMantis",
+      "score": 1014
+    },
+    {
+      "id": "user_218",
+      "nickname": "PluckyRanger",
+      "score": 2986
+    },
+    {
+      "id": "user_219",
+      "nickname": "CrimsonWarden",
+      "score": 2691
+    },
+    {
+      "id": "user_220",
+      "nickname": "GlacierHydra",
+      "score": 2702
+    },
+    {
+      "id": "user_221",
+      "nickname": "BoldBear",
+      "score": 2691
+    },
+    {
+      "id": "user_222",
+      "nickname": "NightWarlock",
+      "score": 1013
+    },
+    {
+      "id": "user_223",
+      "nickname": "CuriousShark",
+      "score": 3743
+    },
+    {
+      "id": "user_224",
+      "nickname": "SwiftVoyager",
+      "score": 1451
+    },
+    {
+      "id": "user_225",
+      "nickname": "MythicPhantom",
+      "score": 4704
+    },
+    {
+      "id": "user_226",
+      "nickname": "RapidBasilisk",
+      "score": 1898
+    },
+    {
+      "id": "user_227",
+      "nickname": "SolarKing",
+      "score": 4915
+    },
+    {
+      "id": "user_228",
+      "nickname": "CrimsonOracle",
+      "score": 4640
+    },
+    {
+      "id": "user_229",
+      "nickname": "BlazingBadger",
+      "score": 3863
+    },
+    {
+      "id": "user_230",
+      "nickname": "IronGuardian",
+      "score": 2307
+    },
+    {
+      "id": "user_231",
+      "nickname": "SwiftNinja",
+      "score": 3974
+    },
+    {
+      "id": "user_232",
+      "nickname": "SwiftHermit",
+      "score": 4825
+    },
+    {
+      "id": "user_233",
+      "nickname": "BlazingGuardian",
+      "score": 4681
+    },
+    {
+      "id": "user_234",
+      "nickname": "FlamingSailor",
+      "score": 1926
+    },
+    {
+      "id": "user_235",
+      "nickname": "FlamingOtter",
+      "score": 2141
+    },
+    {
+      "id": "user_236",
+      "nickname": "WhisperGolem",
+      "score": 2383
+    },
+    {
+      "id": "user_237",
+      "nickname": "HollowJaguar",
+      "score": 2653
+    },
+    {
+      "id": "user_238",
+      "nickname": "WhisperSamurai",
+      "score": 1064
+    },
+    {
+      "id": "user_239",
+      "nickname": "SlyJester",
+      "score": 4147
+    },
+    {
+      "id": "user_240",
+      "nickname": "BlazingLynx",
+      "score": 922
+    },
+    {
+      "id": "user_241",
+      "nickname": "CrimsonRanger",
+      "score": 3010
+    },
+    {
+      "id": "user_242",
+      "nickname": "AlphaLeopard",
+      "score": 4183
+    },
+    {
+      "id": "user_243",
+      "nickname": "NeonOracle",
+      "score": 2623
+    },
+    {
+      "id": "user_244",
+      "nickname": "ShadowCobra",
+      "score": 2461
+    },
+    {
+      "id": "user_245",
+      "nickname": "StormSailor",
+      "score": 2475
+    },
+    {
+      "id": "user_246",
+      "nickname": "QuantumPanther",
+      "score": 1341
+    },
+    {
+      "id": "user_247",
+      "nickname": "RapidScribe",
+      "score": 2250
+    },
+    {
+      "id": "user_248",
+      "nickname": "ArcticEagle",
+      "score": 4398
+    },
+    {
+      "id": "user_249",
+      "nickname": "ZenHawk",
+      "score": 4813
+    },
+    {
+      "id": "user_250",
+      "nickname": "OmegaSeeker",
+      "score": 3461
+    },
+    {
+      "id": "user_251",
+      "nickname": "BrittleKraken",
+      "score": 4548
+    },
+    {
+      "id": "user_252",
+      "nickname": "ArcaneMage",
+      "score": 2821
+    },
+    {
+      "id": "user_253",
+      "nickname": "NightPhoenix",
+      "score": 4302
+    },
+    {
+      "id": "user_254",
+      "nickname": "CrystalTemplar",
+      "score": 4116
+    },
+    {
+      "id": "user_255",
+      "nickname": "IvoryArtisan",
+      "score": 1142
+    },
+    {
+      "id": "user_256",
+      "nickname": "AmberScribe",
+      "score": 3916
+    },
+    {
+      "id": "user_257",
+      "nickname": "SavagePhoenix",
+      "score": 3363
+    },
+    {
+      "id": "user_258",
+      "nickname": "ZenBasilisk",
+      "score": 4028
+    },
+    {
+      "id": "user_259",
+      "nickname": "IvoryPanther",
+      "score": 1115
+    },
+    {
+      "id": "user_260",
+      "nickname": "BlazingPuma",
+      "score": 1695
+    },
+    {
+      "id": "user_261",
+      "nickname": "DeltaMiner",
+      "score": 4499
+    },
+    {
+      "id": "user_262",
+      "nickname": "QuantumGolem",
+      "score": 4542
+    },
+    {
+      "id": "user_263",
+      "nickname": "BoldSpecter",
+      "score": 1147
+    },
+    {
+      "id": "user_264",
+      "nickname": "InfernoHawk",
+      "score": 2812
+    },
+    {
+      "id": "user_265",
+      "nickname": "CopperQueen",
+      "score": 4040
+    },
+    {
+      "id": "user_266",
+      "nickname": "VortexReaper",
+      "score": 1121
+    },
+    {
+      "id": "user_267",
+      "nickname": "NovaAlchemist",
+      "score": 3973
+    },
+    {
+      "id": "user_268",
+      "nickname": "ArcticPuma",
+      "score": 1203
+    },
+    {
+      "id": "user_269",
+      "nickname": "CobaltSentinel",
+      "score": 2355
+    },
+    {
+      "id": "user_270",
+      "nickname": "InfernoHydra",
+      "score": 3185
+    },
+    {
+      "id": "user_271",
+      "nickname": "InfernoMonk",
+      "score": 4400
+    },
+    {
+      "id": "user_272",
+      "nickname": "WhisperVoyager",
+      "score": 4060
+    },
+    {
+      "id": "user_273",
+      "nickname": "DuskRonin",
+      "score": 3294
+    },
+    {
+      "id": "user_274",
+      "nickname": "GallantDruid",
+      "score": 3142
+    },
+    {
+      "id": "user_275",
+      "nickname": "ProtoHermit",
+      "score": 4579
+    },
+    {
+      "id": "user_276",
+      "nickname": "EmeraldLynx",
+      "score": 2163
+    },
+    {
+      "id": "user_277",
+      "nickname": "WickedGriffin",
+      "score": 4260
+    },
+    {
+      "id": "user_278",
+      "nickname": "TitanOtter",
+      "score": 3211
+    },
+    {
+      "id": "user_279",
+      "nickname": "CosmicPrince",
+      "score": 1246
+    },
+    {
+      "id": "user_280",
+      "nickname": "WittyNomad",
+      "score": 1965
+    },
+    {
+      "id": "user_281",
+      "nickname": "ArcticCourier",
+      "score": 4597
+    },
+    {
+      "id": "user_282",
+      "nickname": "WhisperPrince",
+      "score": 4500
+    },
+    {
+      "id": "user_283",
+      "nickname": "PrimeProphet",
+      "score": 1540
+    },
+    {
+      "id": "user_284",
+      "nickname": "WhisperAlchemist",
+      "score": 4901
+    },
+    {
+      "id": "user_285",
+      "nickname": "OmegaRonin",
+      "score": 1727
+    },
+    {
+      "id": "user_286",
+      "nickname": "VortexSeeker",
+      "score": 2272
+    },
+    {
+      "id": "user_287",
+      "nickname": "EchoBaron",
+      "score": 1908
+    },
+    {
+      "id": "user_288",
+      "nickname": "IvoryPhoenix",
+      "score": 4020
+    },
+    {
+      "id": "user_289",
+      "nickname": "CobaltTitan",
+      "score": 4187
+    },
+    {
+      "id": "user_290",
+      "nickname": "PhantomScorpion",
+      "score": 3449
+    },
+    {
+      "id": "user_291",
+      "nickname": "RapidVoyager",
+      "score": 4493
+    },
+    {
+      "id": "user_292",
+      "nickname": "SlyTiger",
+      "score": 1004
+    },
+    {
+      "id": "user_293",
+      "nickname": "NobleMiner",
+      "score": 2265
+    },
+    {
+      "id": "user_294",
+      "nickname": "HollowFox",
+      "score": 4516
+    },
+    {
+      "id": "user_295",
+      "nickname": "NightPanther",
+      "score": 2454
+    },
+    {
+      "id": "user_296",
+      "nickname": "GoldenPhoenix",
+      "score": 4524
+    },
+    {
+      "id": "user_297",
+      "nickname": "ObsidianTiger",
+      "score": 1538
+    },
+    {
+      "id": "user_298",
+      "nickname": "PolarPrince",
+      "score": 2848
+    },
+    {
+      "id": "user_299",
+      "nickname": "DeltaSentinel",
+      "score": 3454
+    },
+    {
+      "id": "user_300",
+      "nickname": "FrostMage",
+      "score": 2143
+    },
+    {
+      "id": "user_301",
+      "nickname": "ObsidianSmith",
+      "score": 1812
+    },
+    {
+      "id": "user_302",
+      "nickname": "WickedEagle",
+      "score": 1547
+    },
+    {
+      "id": "user_303",
+      "nickname": "TranquilHarbinger",
+      "score": 1735
+    },
+    {
+      "id": "user_304",
+      "nickname": "AzureOtter",
+      "score": 4481
+    },
+    {
+      "id": "user_305",
+      "nickname": "RadiantScholar",
+      "score": 3773
+    },
+    {
+      "id": "user_306",
+      "nickname": "ThunderArcher",
+      "score": 1498
+    },
+    {
+      "id": "user_307",
+      "nickname": "CopperHawk",
+      "score": 3946
+    },
+    {
+      "id": "user_308",
+      "nickname": "IndigoAlchemist",
+      "score": 4991
+    },
+    {
+      "id": "user_309",
+      "nickname": "TranquilSmith",
+      "score": 2109
+    },
+    {
+      "id": "user_310",
+      "nickname": "FlamingKraken",
+      "score": 3902
+    },
+    {
+      "id": "user_311",
+      "nickname": "CuriousTitan",
+      "score": 3917
+    },
+    {
+      "id": "user_312",
+      "nickname": "InfernoCobra",
+      "score": 1159
+    },
+    {
+      "id": "user_313",
+      "nickname": "CopperBear",
+      "score": 2199
+    },
+    {
+      "id": "user_314",
+      "nickname": "GhostTitan",
+      "score": 3545
+    },
+    {
+      "id": "user_315",
+      "nickname": "CrimsonSamurai",
+      "score": 2029
+    },
+    {
+      "id": "user_316",
+      "nickname": "SolarCobra",
+      "score": 2128
+    },
+    {
+      "id": "user_317",
+      "nickname": "IronKing",
+      "score": 1984
+    },
+    {
+      "id": "user_318",
+      "nickname": "IvoryKing",
+      "score": 2265
+    },
+    {
+      "id": "user_319",
+      "nickname": "ShadowGuardian",
+      "score": 1220
+    },
+    {
+      "id": "user_320",
+      "nickname": "VelvetSage",
+      "score": 4237
+    },
+    {
+      "id": "user_321",
+      "nickname": "DawnPhantom",
+      "score": 3323
+    },
+    {
+      "id": "user_322",
+      "nickname": "ThunderVoyager",
+      "score": 3335
+    },
+    {
+      "id": "user_323",
+      "nickname": "FlamingPhantom",
+      "score": 4455
+    },
+    {
+      "id": "user_324",
+      "nickname": "ScarletJester",
+      "score": 3165
+    },
+    {
+      "id": "user_325",
+      "nickname": "RoyalPaladin",
+      "score": 2280
+    },
+    {
+      "id": "user_326",
+      "nickname": "CosmicAssassin",
+      "score": 1763
+    },
+    {
+      "id": "user_327",
+      "nickname": "BlazingScholar",
+      "score": 1877
+    },
+    {
+      "id": "user_328",
+      "nickname": "WhisperReaper",
+      "score": 2461
+    },
+    {
+      "id": "user_329",
+      "nickname": "BrittleFox",
+      "score": 828
+    },
+    {
+      "id": "user_330",
+      "nickname": "GhostHydra",
+      "score": 2873
+    },
+    {
+      "id": "user_331",
+      "nickname": "ArcticSentinel",
+      "score": 900
+    },
+    {
+      "id": "user_332",
+      "nickname": "CosmicSage",
+      "score": 4557
+    },
+    {
+      "id": "user_333",
+      "nickname": "IvoryEmpress",
+      "score": 4876
+    },
+    {
+      "id": "user_334",
+      "nickname": "NobleGuardian",
+      "score": 4884
+    },
+    {
+      "id": "user_335",
+      "nickname": "OnyxMantis",
+      "score": 847
+    },
+    {
+      "id": "user_336",
+      "nickname": "TurboCourier",
+      "score": 4842
+    },
+    {
+      "id": "user_337",
+      "nickname": "OmegaStallion",
+      "score": 2748
+    },
+    {
+      "id": "user_338",
+      "nickname": "NobleSentinel",
+      "score": 2576
+    },
+    {
+      "id": "user_339",
+      "nickname": "StoutMantis",
+      "score": 4697
+    },
+    {
+      "id": "user_340",
+      "nickname": "OnyxReaper",
+      "score": 4517
+    },
+    {
+      "id": "user_341",
+      "nickname": "SlyArtisan",
+      "score": 4159
+    },
+    {
+      "id": "user_342",
+      "nickname": "EagerScribe",
+      "score": 4419
+    },
+    {
+      "id": "user_343",
+      "nickname": "DuskDuke",
+      "score": 1450
+    },
+    {
+      "id": "user_344",
+      "nickname": "SolarVoyager",
+      "score": 853
+    },
+    {
+      "id": "user_345",
+      "nickname": "VortexSkipper",
+      "score": 2804
+    },
+    {
+      "id": "user_346",
+      "nickname": "SwiftDruid",
+      "score": 3078
+    },
+    {
+      "id": "user_347",
+      "nickname": "StormRaven",
+      "score": 2500
+    },
+    {
+      "id": "user_348",
+      "nickname": "AzureViper",
+      "score": 1200
+    },
+    {
+      "id": "user_349",
+      "nickname": "NimbleSage",
+      "score": 2314
+    },
+    {
+      "id": "user_350",
+      "nickname": "SavagePhantom",
+      "score": 2014
+    },
+    {
+      "id": "user_351",
+      "nickname": "VelvetDruid",
+      "score": 1251
+    },
+    {
+      "id": "user_352",
+      "nickname": "ZenProphet",
+      "score": 3659
+    },
+    {
+      "id": "user_353",
+      "nickname": "WildCobra",
+      "score": 1100
+    },
+    {
+      "id": "user_354",
+      "nickname": "EchoFalcon",
+      "score": 1990
+    },
+    {
+      "id": "user_355",
+      "nickname": "SilentHydra",
+      "score": 1065
+    },
+    {
+      "id": "user_356",
+      "nickname": "CosmicMage",
+      "score": 3244
+    },
+    {
+      "id": "user_357",
+      "nickname": "IndigoSage",
+      "score": 3512
+    },
+    {
+      "id": "user_358",
+      "nickname": "VelvetKing",
+      "score": 1518
+    },
+    {
+      "id": "user_359",
+      "nickname": "RadiantWarden",
+      "score": 1201
+    },
+    {
+      "id": "user_360",
+      "nickname": "ProtoTiger",
+      "score": 1692
+    },
+    {
+      "id": "user_361",
+      "nickname": "FrostEagle",
+      "score": 4215
+    },
+    {
+      "id": "user_362",
+      "nickname": "RoyalMustang",
+      "score": 2260
+    },
+    {
+      "id": "user_363",
+      "nickname": "AzureSpecter",
+      "score": 2121
+    },
+    {
+      "id": "user_364",
+      "nickname": "DuskPrince",
+      "score": 3129
+    },
+    {
+      "id": "user_365",
+      "nickname": "NeonPhantom",
+      "score": 2253
+    },
+    {
+      "id": "user_366",
+      "nickname": "BrightSamurai",
+      "score": 4530
+    },
+    {
+      "id": "user_367",
+      "nickname": "EagerLeopard",
+      "score": 3750
+    },
+    {
+      "id": "user_368",
+      "nickname": "IndigoKraken",
+      "score": 1093
+    },
+    {
+      "id": "user_369",
+      "nickname": "PluckyMonk",
+      "score": 1562
+    },
+    {
+      "id": "user_370",
+      "nickname": "OmegaLynx",
+      "score": 3251
+    },
+    {
+      "id": "user_371",
+      "nickname": "RadiantWolf",
+      "score": 3444
+    },
+    {
+      "id": "user_372",
+      "nickname": "SavageHawk",
+      "score": 3819
+    },
+    {
+      "id": "user_373",
+      "nickname": "CobaltScribe",
+      "score": 3904
+    },
+    {
+      "id": "user_374",
+      "nickname": "CuriousPuma",
+      "score": 1354
+    },
+    {
+      "id": "user_375",
+      "nickname": "FrostGolem",
+      "score": 4300
+    },
+    {
+      "id": "user_376",
+      "nickname": "IvoryVoyager",
+      "score": 1331
+    },
+    {
+      "id": "user_377",
+      "nickname": "ArcticGuardian",
+      "score": 3198
+    },
+    {
+      "id": "user_378",
+      "nickname": "ShadowAlchemist",
+      "score": 4656
+    },
+    {
+      "id": "user_379",
+      "nickname": "PluckyNomad",
+      "score": 1902
+    },
+    {
+      "id": "user_380",
+      "nickname": "NexusSamurai",
+      "score": 1799
+    },
+    {
+      "id": "user_381",
+      "nickname": "RapidSeeker",
+      "score": 3048
+    },
+    {
+      "id": "user_382",
+      "nickname": "VortexSpecter",
+      "score": 3496
+    },
+    {
+      "id": "user_383",
+      "nickname": "RadiantRonin",
+      "score": 4189
+    },
+    {
+      "id": "user_384",
+      "nickname": "NimbleCourier",
+      "score": 2519
+    },
+    {
+      "id": "user_385",
+      "nickname": "BriskGuardian",
+      "score": 2512
+    },
+    {
+      "id": "user_386",
+      "nickname": "PluckyPuma",
+      "score": 1276
+    },
+    {
+      "id": "user_387",
+      "nickname": "LunarSeeker",
+      "score": 1695
+    },
+    {
+      "id": "user_388",
+      "nickname": "DawnBard",
+      "score": 1518
+    },
+    {
+      "id": "user_389",
+      "nickname": "EagerGuardian",
+      "score": 4762
+    },
+    {
+      "id": "user_390",
+      "nickname": "RogueHawk",
+      "score": 3152
+    },
+    {
+      "id": "user_391",
+      "nickname": "SlySkipper",
+      "score": 4298
+    },
+    {
+      "id": "user_392",
+      "nickname": "SwiftTemplar",
+      "score": 3392
+    },
+    {
+      "id": "user_393",
+      "nickname": "RogueVoyager",
+      "score": 2927
+    },
+    {
+      "id": "user_394",
+      "nickname": "WhisperSmith",
+      "score": 3698
+    },
+    {
+      "id": "user_395",
+      "nickname": "IronHarbinger",
+      "score": 1862
+    },
+    {
+      "id": "user_396",
+      "nickname": "TurboMustang",
+      "score": 4866
+    },
+    {
+      "id": "user_397",
+      "nickname": "StoutSentinel",
+      "score": 4877
+    },
+    {
+      "id": "user_398",
+      "nickname": "BrittlePhoenix",
+      "score": 4834
+    },
+    {
+      "id": "user_399",
+      "nickname": "IvoryPaladin",
+      "score": 2273
+    },
+    {
+      "id": "user_400",
+      "nickname": "CuriousPilot",
+      "score": 2706
+    },
+    {
+      "id": "user_401",
+      "nickname": "CrimsonPrince",
+      "score": 3179
+    },
+    {
+      "id": "user_402",
+      "nickname": "TitanBasilisk",
+      "score": 2385
+    },
+    {
+      "id": "user_403",
+      "nickname": "VioletDruid",
+      "score": 812
+    },
+    {
+      "id": "user_404",
+      "nickname": "RogueCourier",
+      "score": 1768
+    },
+    {
+      "id": "user_405",
+      "nickname": "MistyWarlock",
+      "score": 996
+    },
+    {
+      "id": "user_406",
+      "nickname": "StormMantis",
+      "score": 4608
+    },
+    {
+      "id": "user_407",
+      "nickname": "VortexKing",
+      "score": 1766
+    },
+    {
+      "id": "user_408",
+      "nickname": "NeonNinja",
+      "score": 2498
+    },
+    {
+      "id": "user_409",
+      "nickname": "BrittleBasilisk",
+      "score": 4196
+    },
+    {
+      "id": "user_410",
+      "nickname": "VelvetTemplar",
+      "score": 4191
+    },
+    {
+      "id": "user_411",
+      "nickname": "OmegaKing",
+      "score": 1172
+    },
+    {
+      "id": "user_412",
+      "nickname": "ZestyNomad",
+      "score": 3534
+    },
+    {
+      "id": "user_413",
+      "nickname": "RogueKing",
+      "score": 3664
+    },
+    {
+      "id": "user_414",
+      "nickname": "ShadowSpecter",
+      "score": 2539
+    },
+    {
+      "id": "user_415",
+      "nickname": "PolarMage",
+      "score": 892
+    },
+    {
+      "id": "user_416",
+      "nickname": "ObsidianMantis",
+      "score": 2448
+    },
+    {
+      "id": "user_417",
+      "nickname": "CrimsonDruid",
+      "score": 3107
+    },
+    {
+      "id": "user_418",
+      "nickname": "QuantumMonk",
+      "score": 2884
+    },
+    {
+      "id": "user_419",
+      "nickname": "VioletScribe",
+      "score": 1355
+    },
+    {
+      "id": "user_420",
+      "nickname": "EagerSkipper",
+      "score": 3321
+    },
+    {
+      "id": "user_421",
+      "nickname": "IndigoBard",
+      "score": 3259
+    },
+    {
+      "id": "user_422",
+      "nickname": "GallantKraken",
+      "score": 4950
+    },
+    {
+      "id": "user_423",
+      "nickname": "GlacierEngineer",
+      "score": 3453
+    },
+    {
+      "id": "user_424",
+      "nickname": "NovaKraken",
+      "score": 850
+    },
+    {
+      "id": "user_425",
+      "nickname": "AzureCourier",
+      "score": 1732
+    },
+    {
+      "id": "user_426",
+      "nickname": "SavagePrince",
+      "score": 3530
+    },
+    {
+      "id": "user_427",
+      "nickname": "BrightCourier",
+      "score": 3596
+    },
+    {
+      "id": "user_428",
+      "nickname": "DawnOracle",
+      "score": 4044
+    },
+    {
+      "id": "user_429",
+      "nickname": "NobleArtisan",
+      "score": 1038
+    },
+    {
+      "id": "user_430",
+      "nickname": "SlyNinja",
+      "score": 2238
+    },
+    {
+      "id": "user_431",
+      "nickname": "GallantWarlock",
+      "score": 2389
+    },
+    {
+      "id": "user_432",
+      "nickname": "ZenFalcon",
+      "score": 3507
+    },
+    {
+      "id": "user_433",
+      "nickname": "ArcaneSage",
+      "score": 3568
+    },
+    {
+      "id": "user_434",
+      "nickname": "AzureQueen",
+      "score": 4724
+    },
+    {
+      "id": "user_435",
+      "nickname": "WhisperBerserker",
+      "score": 4687
+    },
+    {
+      "id": "user_436",
+      "nickname": "BrightBasilisk",
+      "score": 1091
+    },
+    {
+      "id": "user_437",
+      "nickname": "FlamingBaron",
+      "score": 1912
+    },
+    {
+      "id": "user_438",
+      "nickname": "ZenSmith",
+      "score": 4744
+    },
+    {
+      "id": "user_439",
+      "nickname": "OmegaScholar",
+      "score": 2072
+    },
+    {
+      "id": "user_440",
+      "nickname": "ZenArtisan",
+      "score": 4573
+    },
+    {
+      "id": "user_441",
+      "nickname": "GoldenTiger",
+      "score": 3545
+    },
+    {
+      "id": "user_442",
+      "nickname": "FrostNinja",
+      "score": 4588
+    },
+    {
+      "id": "user_443",
+      "nickname": "PluckyReaper",
+      "score": 4191
+    },
+    {
+      "id": "user_444",
+      "nickname": "BriskQueen",
+      "score": 1258
+    },
+    {
+      "id": "user_445",
+      "nickname": "GallantGuardian",
+      "score": 3252
+    },
+    {
+      "id": "user_446",
+      "nickname": "WickedMiner",
+      "score": 3384
+    },
+    {
+      "id": "user_447",
+      "nickname": "EmeraldSmith",
+      "score": 953
+    },
+    {
+      "id": "user_448",
+      "nickname": "BrittleScribe",
+      "score": 2506
+    },
+    {
+      "id": "user_449",
+      "nickname": "GoldenFox",
+      "score": 3517
+    },
+    {
+      "id": "user_450",
+      "nickname": "PluckySage",
+      "score": 3696
+    },
+    {
+      "id": "user_451",
+      "nickname": "BriskEmpress",
+      "score": 1342
+    },
+    {
+      "id": "user_452",
+      "nickname": "RadiantEmpress",
+      "score": 2023
+    },
+    {
+      "id": "user_453",
+      "nickname": "NovaMage",
+      "score": 3097
+    },
+    {
+      "id": "user_454",
+      "nickname": "NovaEngineer",
+      "score": 1055
+    },
+    {
+      "id": "user_455",
+      "nickname": "SilentDruid",
+      "score": 3578
+    },
+    {
+      "id": "user_456",
+      "nickname": "CosmicSmith",
+      "score": 3873
+    },
+    {
+      "id": "user_457",
+      "nickname": "InfernoNinja",
+      "score": 2159
+    },
+    {
+      "id": "user_458",
+      "nickname": "BoldAssassin",
+      "score": 3991
+    },
+    {
+      "id": "user_459",
+      "nickname": "RapidArcher",
+      "score": 2335
+    },
+    {
+      "id": "user_460",
+      "nickname": "TranquilSailor",
+      "score": 1757
+    },
+    {
+      "id": "user_461",
+      "nickname": "ArcaneShark",
+      "score": 3325
+    },
+    {
+      "id": "user_462",
+      "nickname": "SilentWolf",
+      "score": 3376
+    },
+    {
+      "id": "user_463",
+      "nickname": "CuriousJaguar",
+      "score": 1059
+    },
+    {
+      "id": "user_464",
+      "nickname": "RoyalCoyote",
+      "score": 3024
+    },
+    {
+      "id": "user_465",
+      "nickname": "SilentKraken",
+      "score": 4190
+    },
+    {
+      "id": "user_466",
+      "nickname": "ThunderHermit",
+      "score": 1511
+    },
+    {
+      "id": "user_467",
+      "nickname": "SlyJaguar",
+      "score": 4871
+    },
+    {
+      "id": "user_468",
+      "nickname": "DuskLynx",
+      "score": 2746
+    },
+    {
+      "id": "user_469",
+      "nickname": "InfernoQueen",
+      "score": 3844
+    },
+    {
+      "id": "user_470",
+      "nickname": "TurboRanger",
+      "score": 4502
+    },
+    {
+      "id": "user_471",
+      "nickname": "StoutScholar",
+      "score": 3279
+    },
+    {
+      "id": "user_472",
+      "nickname": "QuantumDragon",
+      "score": 2570
+    },
+    {
+      "id": "user_473",
+      "nickname": "VioletBadger",
+      "score": 3276
+    },
+    {
+      "id": "user_474",
+      "nickname": "ArcticOtter",
+      "score": 2233
+    },
+    {
+      "id": "user_475",
+      "nickname": "RapidBaron",
+      "score": 1719
+    },
+    {
+      "id": "user_476",
+      "nickname": "CrystalGolem",
+      "score": 3865
+    },
+    {
+      "id": "user_477",
+      "nickname": "TranquilGriffin",
+      "score": 1106
+    },
+    {
+      "id": "user_478",
+      "nickname": "RoyalJester",
+      "score": 2455
+    },
+    {
+      "id": "user_479",
+      "nickname": "ArcaneTiger",
+      "score": 1558
+    },
+    {
+      "id": "user_480",
+      "nickname": "GhostFox",
+      "score": 4435
+    },
+    {
+      "id": "user_481",
+      "nickname": "TurboAssassin",
+      "score": 4945
+    },
+    {
+      "id": "user_482",
+      "nickname": "HollowPhantom",
+      "score": 1004
+    },
+    {
+      "id": "user_483",
+      "nickname": "HollowPilot",
+      "score": 4753
+    },
+    {
+      "id": "user_484",
+      "nickname": "RapidScholar",
+      "score": 4896
+    },
+    {
+      "id": "user_485",
+      "nickname": "PluckyJaguar",
+      "score": 2062
+    },
+    {
+      "id": "user_486",
+      "nickname": "CrystalPhoenix",
+      "score": 2358
+    },
+    {
+      "id": "user_487",
+      "nickname": "ArcticAssassin",
+      "score": 3586
+    },
+    {
+      "id": "user_488",
+      "nickname": "SwiftHawk",
+      "score": 4760
+    },
+    {
+      "id": "user_489",
+      "nickname": "AmberMonk",
+      "score": 3342
+    },
+    {
+      "id": "user_490",
+      "nickname": "DeltaLeopard",
+      "score": 3481
+    },
+    {
+      "id": "user_491",
+      "nickname": "ArcaneScholar",
+      "score": 1973
+    },
+    {
+      "id": "user_492",
+      "nickname": "MistyJester",
+      "score": 1604
+    },
+    {
+      "id": "user_493",
+      "nickname": "GallantCheetah",
+      "score": 1887
+    },
+    {
+      "id": "user_494",
+      "nickname": "ThunderSkipper",
+      "score": 2480
+    },
+    {
+      "id": "user_495",
+      "nickname": "MistyVoyager",
+      "score": 1099
+    },
+    {
+      "id": "user_496",
+      "nickname": "ZestyPilot",
+      "score": 4563
+    },
+    {
+      "id": "user_497",
+      "nickname": "WildMantis",
+      "score": 3975
+    },
+    {
+      "id": "user_498",
+      "nickname": "HollowEngineer",
+      "score": 1748
+    },
+    {
+      "id": "user_499",
+      "nickname": "InfernoMage",
+      "score": 833
+    },
+    {
+      "id": "user_500",
+      "nickname": "EmeraldCoyote",
+      "score": 3347
+    },
+    {
+      "id": "user_501",
+      "nickname": "ProtoAlchemist",
+      "score": 1160
+    },
+    {
+      "id": "user_502",
+      "nickname": "NightScorpion",
+      "score": 1513
+    },
+    {
+      "id": "user_503",
+      "nickname": "ArcaneEagle",
+      "score": 3530
+    },
+    {
+      "id": "user_504",
+      "nickname": "PluckyEmpress",
+      "score": 4624
+    },
+    {
+      "id": "user_505",
+      "nickname": "ProtoSmith",
+      "score": 1177
+    },
+    {
+      "id": "user_506",
+      "nickname": "ArcticSailor",
+      "score": 1644
+    },
+    {
+      "id": "user_507",
+      "nickname": "ShadowKing",
+      "score": 3359
+    },
+    {
+      "id": "user_508",
+      "nickname": "LunarPhantom",
+      "score": 984
+    },
+    {
+      "id": "user_509",
+      "nickname": "PrimeBadger",
+      "score": 3357
+    },
+    {
+      "id": "user_510",
+      "nickname": "BrittleAssassin",
+      "score": 2519
+    },
+    {
+      "id": "user_511",
+      "nickname": "VelvetMage",
+      "score": 3428
+    },
+    {
+      "id": "user_512",
+      "nickname": "NeonSentinel",
+      "score": 2442
+    },
+    {
+      "id": "user_513",
+      "nickname": "GallantWolf",
+      "score": 2377
+    },
+    {
+      "id": "user_514",
+      "nickname": "CrimsonBadger",
+      "score": 3147
+    },
+    {
+      "id": "user_515",
+      "nickname": "QuantumSage",
+      "score": 3066
+    },
+    {
+      "id": "user_516",
+      "nickname": "OnyxSeeker",
+      "score": 3414
+    },
+    {
+      "id": "user_517",
+      "nickname": "StormGolem",
+      "score": 4413
+    },
+    {
+      "id": "user_518",
+      "nickname": "SlyCheetah",
+      "score": 1763
+    },
+    {
+      "id": "user_519",
+      "nickname": "GoldenHawk",
+      "score": 3033
+    },
+    {
+      "id": "user_520",
+      "nickname": "DuskGuardian",
+      "score": 2023
+    },
+    {
+      "id": "user_521",
+      "nickname": "RoyalEngineer",
+      "score": 2090
+    },
+    {
+      "id": "user_522",
+      "nickname": "ScarletPrince",
+      "score": 3041
+    },
+    {
+      "id": "user_523",
+      "nickname": "ProtoStallion",
+      "score": 1737
+    },
+    {
+      "id": "user_524",
+      "nickname": "NimbleLynx",
+      "score": 924
+    },
+    {
+      "id": "user_525",
+      "nickname": "IvoryJester",
+      "score": 1638
+    },
+    {
+      "id": "user_526",
+      "nickname": "CrimsonProphet",
+      "score": 2492
+    },
+    {
+      "id": "user_527",
+      "nickname": "AzureSentinel",
+      "score": 3669
+    },
+    {
+      "id": "user_528",
+      "nickname": "TitanPaladin",
+      "score": 3409
+    },
+    {
+      "id": "user_529",
+      "nickname": "TitanPilot",
+      "score": 3020
+    },
+    {
+      "id": "user_530",
+      "nickname": "PluckyFox",
+      "score": 1959
+    },
+    {
+      "id": "user_531",
+      "nickname": "RogueRanger",
+      "score": 3120
+    },
+    {
+      "id": "user_532",
+      "nickname": "HollowPanther",
+      "score": 2805
+    },
+    {
+      "id": "user_533",
+      "nickname": "NimbleGriffin",
+      "score": 2203
+    },
+    {
+      "id": "user_534",
+      "nickname": "AzureStallion",
+      "score": 1383
+    },
+    {
+      "id": "user_535",
+      "nickname": "PluckyOtter",
+      "score": 3350
+    },
+    {
+      "id": "user_536",
+      "nickname": "GallantStallion",
+      "score": 3574
+    },
+    {
+      "id": "user_537",
+      "nickname": "BlazingRanger",
+      "score": 4434
+    },
+    {
+      "id": "user_538",
+      "nickname": "EmeraldShark",
+      "score": 1215
+    },
+    {
+      "id": "user_539",
+      "nickname": "OnyxOracle",
+      "score": 1865
+    },
+    {
+      "id": "user_540",
+      "nickname": "NovaHarbinger",
+      "score": 1037
+    },
+    {
+      "id": "user_541",
+      "nickname": "BetaArtisan",
+      "score": 4656
+    },
+    {
+      "id": "user_542",
+      "nickname": "TurboAlchemist",
+      "score": 1213
+    },
+    {
+      "id": "user_543",
+      "nickname": "NexusScribe",
+      "score": 1667
+    },
+    {
+      "id": "user_544",
+      "nickname": "FlamingJester",
+      "score": 3942
+    },
+    {
+      "id": "user_545",
+      "nickname": "BrightLeopard",
+      "score": 1240
+    },
+    {
+      "id": "user_546",
+      "nickname": "RadiantSkipper",
+      "score": 1505
+    },
+    {
+      "id": "user_547",
+      "nickname": "CopperGolem",
+      "score": 4293
+    },
+    {
+      "id": "user_548",
+      "nickname": "WhisperPaladin",
+      "score": 4010
+    },
+    {
+      "id": "user_549",
+      "nickname": "AmberCobra",
+      "score": 2266
+    },
+    {
+      "id": "user_550",
+      "nickname": "NimbleSailor",
+      "score": 4452
+    },
+    {
+      "id": "user_551",
+      "nickname": "WittyLeopard",
+      "score": 3713
+    },
+    {
+      "id": "user_552",
+      "nickname": "NimbleScribe",
+      "score": 3359
+    },
+    {
+      "id": "user_553",
+      "nickname": "InfernoPrince",
+      "score": 3522
+    },
+    {
+      "id": "user_554",
+      "nickname": "SwiftGuardian",
+      "score": 2423
+    },
+    {
+      "id": "user_555",
+      "nickname": "QuantumLynx",
+      "score": 1443
+    },
+    {
+      "id": "user_556",
+      "nickname": "VortexHydra",
+      "score": 4614
+    },
+    {
+      "id": "user_557",
+      "nickname": "CuriousPanther",
+      "score": 1879
+    },
+    {
+      "id": "user_558",
+      "nickname": "LunarCobra",
+      "score": 1561
+    },
+    {
+      "id": "user_559",
+      "nickname": "HollowKing",
+      "score": 4636
+    },
+    {
+      "id": "user_560",
+      "nickname": "FrostNomad",
+      "score": 1596
+    },
+    {
+      "id": "user_561",
+      "nickname": "NovaKnight",
+      "score": 4532
+    },
+    {
+      "id": "user_562",
+      "nickname": "GlacierMiner",
+      "score": 3342
+    },
+    {
+      "id": "user_563",
+      "nickname": "CuriousSentinel",
+      "score": 4612
+    },
+    {
+      "id": "user_564",
+      "nickname": "PrimePrince",
+      "score": 4654
+    },
+    {
+      "id": "user_565",
+      "nickname": "QuantumNomad",
+      "score": 2698
+    },
+    {
+      "id": "user_566",
+      "nickname": "PolarCheetah",
+      "score": 2633
+    },
+    {
+      "id": "user_567",
+      "nickname": "EchoScribe",
+      "score": 1977
+    },
+    {
+      "id": "user_568",
+      "nickname": "OnyxMustang",
+      "score": 2913
+    },
+    {
+      "id": "user_569",
+      "nickname": "PhantomSkipper",
+      "score": 3777
+    },
+    {
+      "id": "user_570",
+      "nickname": "InfernoSage",
+      "score": 4011
+    },
+    {
+      "id": "user_571",
+      "nickname": "NightJaguar",
+      "score": 2302
+    },
+    {
+      "id": "user_572",
+      "nickname": "LunarMonk",
+      "score": 3506
+    },
+    {
+      "id": "user_573",
+      "nickname": "TitanMonk",
+      "score": 3460
+    },
+    {
+      "id": "user_574",
+      "nickname": "InfernoKing",
+      "score": 4513
+    },
+    {
+      "id": "user_575",
+      "nickname": "WickedNomad",
+      "score": 4793
+    },
+    {
+      "id": "user_576",
+      "nickname": "CrystalOracle",
+      "score": 1047
+    },
+    {
+      "id": "user_577",
+      "nickname": "GlacierHawk",
+      "score": 1335
+    },
+    {
+      "id": "user_578",
+      "nickname": "AlphaTemplar",
+      "score": 4693
+    },
+    {
+      "id": "user_579",
+      "nickname": "WittyArcher",
+      "score": 1724
+    },
+    {
+      "id": "user_580",
+      "nickname": "WickedSamurai",
+      "score": 3679
+    },
+    {
+      "id": "user_581",
+      "nickname": "NightAlchemist",
+      "score": 4721
+    },
+    {
+      "id": "user_582",
+      "nickname": "NeonBerserker",
+      "score": 4578
+    },
+    {
+      "id": "user_583",
+      "nickname": "PluckyCourier",
+      "score": 2199
+    },
+    {
+      "id": "user_584",
+      "nickname": "SilentMantis",
+      "score": 3112
+    },
+    {
+      "id": "user_585",
+      "nickname": "PrimePuma",
+      "score": 3655
+    },
+    {
+      "id": "user_586",
+      "nickname": "PluckyHarbinger",
+      "score": 1843
+    },
+    {
+      "id": "user_587",
+      "nickname": "OnyxQueen",
+      "score": 4961
+    },
+    {
+      "id": "user_588",
+      "nickname": "FlamingHawk",
+      "score": 1643
+    },
+    {
+      "id": "user_589",
+      "nickname": "NexusArtisan",
+      "score": 4123
+    },
+    {
+      "id": "user_590",
+      "nickname": "AzureKraken",
+      "score": 1676
+    },
+    {
+      "id": "user_591",
+      "nickname": "DuskPanther",
+      "score": 3469
+    },
+    {
+      "id": "user_592",
+      "nickname": "CopperEmpress",
+      "score": 1381
+    },
+    {
+      "id": "user_593",
+      "nickname": "CrimsonArtisan",
+      "score": 3274
+    },
+    {
+      "id": "user_594",
+      "nickname": "EagerRonin",
+      "score": 4576
+    },
+    {
+      "id": "user_595",
+      "nickname": "CosmicPanther",
+      "score": 4083
+    },
+    {
+      "id": "user_596",
+      "nickname": "BrightCobra",
+      "score": 4186
+    },
+    {
+      "id": "user_597",
+      "nickname": "FlamingTiger",
+      "score": 2754
+    },
+    {
+      "id": "user_598",
+      "nickname": "VortexWraith",
+      "score": 2796
+    },
+    {
+      "id": "user_599",
+      "nickname": "LunarRanger",
+      "score": 2102
+    },
+    {
+      "id": "user_600",
+      "nickname": "SolarFalcon",
+      "score": 4751
+    },
+    {
+      "id": "user_601",
+      "nickname": "BlazingOtter",
+      "score": 3944
+    },
+    {
+      "id": "user_602",
+      "nickname": "RogueJester",
+      "score": 1341
+    },
+    {
+      "id": "user_603",
+      "nickname": "IvoryFalcon",
+      "score": 3591
+    },
+    {
+      "id": "user_604",
+      "nickname": "GallantAssassin",
+      "score": 2505
+    },
+    {
+      "id": "user_605",
+      "nickname": "WickedLeopard",
+      "score": 4331
+    },
+    {
+      "id": "user_606",
+      "nickname": "ArcaneOracle",
+      "score": 4366
+    },
+    {
+      "id": "user_607",
+      "nickname": "ObsidianFalcon",
+      "score": 3603
+    },
+    {
+      "id": "user_608",
+      "nickname": "BrightFalcon",
+      "score": 2734
+    },
+    {
+      "id": "user_609",
+      "nickname": "EchoLynx",
+      "score": 2217
+    },
+    {
+      "id": "user_610",
+      "nickname": "DawnDruid",
+      "score": 1438
+    },
+    {
+      "id": "user_611",
+      "nickname": "ObsidianGuardian",
+      "score": 4786
+    },
+    {
+      "id": "user_612",
+      "nickname": "DeltaEmpress",
+      "score": 1736
+    },
+    {
+      "id": "user_613",
+      "nickname": "NeonDruid",
+      "score": 4592
+    },
+    {
+      "id": "user_614",
+      "nickname": "MythicHermit",
+      "score": 3465
+    },
+    {
+      "id": "user_615",
+      "nickname": "StoutWarlock",
+      "score": 1599
+    },
+    {
+      "id": "user_616",
+      "nickname": "GlacierCoyote",
+      "score": 4447
+    },
+    {
+      "id": "user_617",
+      "nickname": "NimbleEmpress",
+      "score": 2243
+    },
+    {
+      "id": "user_618",
+      "nickname": "DuskNinja",
+      "score": 3323
+    },
+    {
+      "id": "user_619",
+      "nickname": "WittyRonin",
+      "score": 4124
+    },
+    {
+      "id": "user_620",
+      "nickname": "HollowCourier",
+      "score": 1370
+    },
+    {
+      "id": "user_621",
+      "nickname": "IvoryBear",
+      "score": 1690
+    },
+    {
+      "id": "user_622",
+      "nickname": "FlamingDruid",
+      "score": 3904
+    },
+    {
+      "id": "user_623",
+      "nickname": "NovaSkipper",
+      "score": 3482
+    },
+    {
+      "id": "user_624",
+      "nickname": "AzureWraith",
+      "score": 4849
+    },
+    {
+      "id": "user_625",
+      "nickname": "FlamingMage",
+      "score": 1303
+    },
+    {
+      "id": "user_626",
+      "nickname": "CopperMantis",
+      "score": 1541
+    },
+    {
+      "id": "user_627",
+      "nickname": "PrimeMantis",
+      "score": 2582
+    },
+    {
+      "id": "user_628",
+      "nickname": "AmberJester",
+      "score": 1938
+    },
+    {
+      "id": "user_629",
+      "nickname": "LunarGolem",
+      "score": 801
+    },
+    {
+      "id": "user_630",
+      "nickname": "WittyScribe",
+      "score": 2001
+    },
+    {
+      "id": "user_631",
+      "nickname": "BrittleCoyote",
+      "score": 2022
+    },
+    {
+      "id": "user_632",
+      "nickname": "MythicMage",
+      "score": 4510
+    },
+    {
+      "id": "user_633",
+      "nickname": "TranquilKing",
+      "score": 3187
+    },
+    {
+      "id": "user_634",
+      "nickname": "BrittleQueen",
+      "score": 3994
+    },
+    {
+      "id": "user_635",
+      "nickname": "BetaRanger",
+      "score": 4463
+    },
+    {
+      "id": "user_636",
+      "nickname": "EmeraldWolf",
+      "score": 2402
+    },
+    {
+      "id": "user_637",
+      "nickname": "PrimeHydra",
+      "score": 2484
+    },
+    {
+      "id": "user_638",
+      "nickname": "PhantomOracle",
+      "score": 3393
+    },
+    {
+      "id": "user_639",
+      "nickname": "SolarWraith",
+      "score": 3255
+    },
+    {
+      "id": "user_640",
+      "nickname": "ZenEagle",
+      "score": 3294
+    },
+    {
+      "id": "user_641",
+      "nickname": "BetaScholar",
+      "score": 4361
+    },
+    {
+      "id": "user_642",
+      "nickname": "PrimeEagle",
+      "score": 3620
+    },
+    {
+      "id": "user_643",
+      "nickname": "CobaltProphet",
+      "score": 1531
+    },
+    {
+      "id": "user_644",
+      "nickname": "SolarDragon",
+      "score": 866
+    },
+    {
+      "id": "user_645",
+      "nickname": "DeltaHarbinger",
+      "score": 4981
+    },
+    {
+      "id": "user_646",
+      "nickname": "IndigoBear",
+      "score": 4111
+    },
+    {
+      "id": "user_647",
+      "nickname": "NovaRaven",
+      "score": 1844
+    },
+    {
+      "id": "user_648",
+      "nickname": "RogueEagle",
+      "score": 3209
+    },
+    {
+      "id": "user_649",
+      "nickname": "CuriousMantis",
+      "score": 1311
+    },
+    {
+      "id": "user_650",
+      "nickname": "RoguePaladin",
+      "score": 3824
+    },
+    {
+      "id": "user_651",
+      "nickname": "VelvetLeopard",
+      "score": 1235
+    },
+    {
+      "id": "user_652",
+      "nickname": "BriskGriffin",
+      "score": 806
+    },
+    {
+      "id": "user_653",
+      "nickname": "CrimsonQueen",
+      "score": 3742
+    },
+    {
+      "id": "user_654",
+      "nickname": "LunarDuke",
+      "score": 1698
+    },
+    {
+      "id": "user_655",
+      "nickname": "ThunderOracle",
+      "score": 3111
+    },
+    {
+      "id": "user_656",
+      "nickname": "FlamingWraith",
+      "score": 1055
+    },
+    {
+      "id": "user_657",
+      "nickname": "IndigoStallion",
+      "score": 2727
+    },
+    {
+      "id": "user_658",
+      "nickname": "InfernoDuke",
+      "score": 4336
+    },
+    {
+      "id": "user_659",
+      "nickname": "WickedHarbinger",
+      "score": 4029
+    },
+    {
+      "id": "user_660",
+      "nickname": "MythicBaron",
+      "score": 3406
+    },
+    {
+      "id": "user_661",
+      "nickname": "MythicSpecter",
+      "score": 3935
+    },
+    {
+      "id": "user_662",
+      "nickname": "RadiantMonk",
+      "score": 4126
+    },
+    {
+      "id": "user_663",
+      "nickname": "GallantPilot",
+      "score": 3925
+    },
+    {
+      "id": "user_664",
+      "nickname": "AmberTitan",
+      "score": 4365
+    },
+    {
+      "id": "user_665",
+      "nickname": "ArcaneDuke",
+      "score": 2530
+    },
+    {
+      "id": "user_666",
+      "nickname": "AzureScribe",
+      "score": 2220
+    },
+    {
+      "id": "user_667",
+      "nickname": "ArcticKing",
+      "score": 4690
+    },
+    {
+      "id": "user_668",
+      "nickname": "CuriousKing",
+      "score": 1939
+    },
+    {
+      "id": "user_669",
+      "nickname": "SavageGuardian",
+      "score": 2341
+    },
+    {
+      "id": "user_670",
+      "nickname": "SolarRanger",
+      "score": 3950
+    },
+    {
+      "id": "user_671",
+      "nickname": "TurboArcher",
+      "score": 3751
+    },
+    {
+      "id": "user_672",
+      "nickname": "InfernoPhoenix",
+      "score": 4217
+    },
+    {
+      "id": "user_673",
+      "nickname": "TitanOracle",
+      "score": 2063
+    },
+    {
+      "id": "user_674",
+      "nickname": "HollowMonk",
+      "score": 3163
+    },
+    {
+      "id": "user_675",
+      "nickname": "WittyBadger",
+      "score": 1828
+    },
+    {
+      "id": "user_676",
+      "nickname": "CrimsonReaper",
+      "score": 1900
+    },
+    {
+      "id": "user_677",
+      "nickname": "OmegaDuke",
+      "score": 895
+    },
+    {
+      "id": "user_678",
+      "nickname": "CrystalOtter",
+      "score": 1387
+    },
+    {
+      "id": "user_679",
+      "nickname": "BlazingMonk",
+      "score": 928
+    },
+    {
+      "id": "user_680",
+      "nickname": "ArcticEmpress",
+      "score": 1979
+    },
+    {
+      "id": "user_681",
+      "nickname": "DuskJester",
+      "score": 4787
+    },
+    {
+      "id": "user_682",
+      "nickname": "BrightKing",
+      "score": 4377
+    },
+    {
+      "id": "user_683",
+      "nickname": "MistyScribe",
+      "score": 1912
+    },
+    {
+      "id": "user_684",
+      "nickname": "IronMustang",
+      "score": 1493
+    },
+    {
+      "id": "user_685",
+      "nickname": "CrystalStallion",
+      "score": 1924
+    },
+    {
+      "id": "user_686",
+      "nickname": "PluckyEngineer",
+      "score": 4206
+    },
+    {
+      "id": "user_687",
+      "nickname": "QuantumPhoenix",
+      "score": 4535
+    },
+    {
+      "id": "user_688",
+      "nickname": "VortexSentinel",
+      "score": 4287
+    },
+    {
+      "id": "user_689",
+      "nickname": "RoyalDragon",
+      "score": 2272
+    },
+    {
+      "id": "user_690",
+      "nickname": "OmegaArcher",
+      "score": 4522
+    },
+    {
+      "id": "user_691",
+      "nickname": "ProtoHarbinger",
+      "score": 4973
+    },
+    {
+      "id": "user_692",
+      "nickname": "WittySamurai",
+      "score": 4274
+    },
+    {
+      "id": "user_693",
+      "nickname": "CopperDragon",
+      "score": 4486
+    },
+    {
+      "id": "user_694",
+      "nickname": "CrystalMiner",
+      "score": 3951
+    },
+    {
+      "id": "user_695",
+      "nickname": "ScarletMantis",
+      "score": 3710
+    },
+    {
+      "id": "user_696",
+      "nickname": "BrittleHawk",
+      "score": 2649
+    },
+    {
+      "id": "user_697",
+      "nickname": "InfernoCheetah",
+      "score": 2322
+    },
+    {
+      "id": "user_698",
+      "nickname": "ZestyAlchemist",
+      "score": 4279
+    },
+    {
+      "id": "user_699",
+      "nickname": "RoyalPilot",
+      "score": 860
+    },
+    {
+      "id": "user_700",
+      "nickname": "ZestyPhoenix",
+      "score": 4880
+    },
+    {
+      "id": "user_701",
+      "nickname": "VortexWarlock",
+      "score": 2739
+    },
+    {
+      "id": "user_702",
+      "nickname": "SlySmith",
+      "score": 4910
+    },
+    {
+      "id": "user_703",
+      "nickname": "PrimeWolf",
+      "score": 3005
+    },
+    {
+      "id": "user_704",
+      "nickname": "NexusSage",
+      "score": 4165
+    },
+    {
+      "id": "user_705",
+      "nickname": "DuskKnight",
+      "score": 3806
+    },
+    {
+      "id": "user_706",
+      "nickname": "OnyxDragon",
+      "score": 1074
+    },
+    {
+      "id": "user_707",
+      "nickname": "IvoryHermit",
+      "score": 1110
+    },
+    {
+      "id": "user_708",
+      "nickname": "DawnCoyote",
+      "score": 4758
+    },
+    {
+      "id": "user_709",
+      "nickname": "NeonLeopard",
+      "score": 3819
+    },
+    {
+      "id": "user_710",
+      "nickname": "AlphaCheetah",
+      "score": 1727
+    },
+    {
+      "id": "user_711",
+      "nickname": "TranquilSeeker",
+      "score": 4744
+    },
+    {
+      "id": "user_712",
+      "nickname": "CuriousDragon",
+      "score": 1455
+    },
+    {
+      "id": "user_713",
+      "nickname": "GoldenMantis",
+      "score": 1963
+    },
+    {
+      "id": "user_714",
+      "nickname": "ArcaneAlchemist",
+      "score": 3089
+    },
+    {
+      "id": "user_715",
+      "nickname": "NexusBerserker",
+      "score": 4608
+    },
+    {
+      "id": "user_716",
+      "nickname": "RogueWolf",
+      "score": 1440
+    },
+    {
+      "id": "user_717",
+      "nickname": "SilentBear",
+      "score": 1524
+    },
+    {
+      "id": "user_718",
+      "nickname": "AlphaHarbinger",
+      "score": 2808
+    },
+    {
+      "id": "user_719",
+      "nickname": "CopperScorpion",
+      "score": 4670
+    },
+    {
+      "id": "user_720",
+      "nickname": "MythicEmpress",
+      "score": 1439
+    },
+    {
+      "id": "user_721",
+      "nickname": "VortexArtisan",
+      "score": 3359
+    },
+    {
+      "id": "user_722",
+      "nickname": "NightTiger",
+      "score": 1232
+    },
+    {
+      "id": "user_723",
+      "nickname": "CosmicMustang",
+      "score": 3614
+    },
+    {
+      "id": "user_724",
+      "nickname": "BriskSailor",
+      "score": 888
+    },
+    {
+      "id": "user_725",
+      "nickname": "AmberReaper",
+      "score": 4640
+    },
+    {
+      "id": "user_726",
+      "nickname": "ShadowSailor",
+      "score": 4519
+    },
+    {
+      "id": "user_727",
+      "nickname": "BlazingPilot",
+      "score": 4999
+    },
+    {
+      "id": "user_728",
+      "nickname": "GoldenSeeker",
+      "score": 4643
+    },
+    {
+      "id": "user_729",
+      "nickname": "StormVoyager",
+      "score": 3515
+    },
+    {
+      "id": "user_730",
+      "nickname": "WildSamurai",
+      "score": 4248
+    },
+    {
+      "id": "user_731",
+      "nickname": "FrostEngineer",
+      "score": 3691
+    },
+    {
+      "id": "user_732",
+      "nickname": "WittyBerserker",
+      "score": 3213
+    },
+    {
+      "id": "user_733",
+      "nickname": "NexusSeeker",
+      "score": 3169
+    },
+    {
+      "id": "user_734",
+      "nickname": "EmeraldFalcon",
+      "score": 2172
+    },
+    {
+      "id": "user_735",
+      "nickname": "SlyBard",
+      "score": 1089
+    },
+    {
+      "id": "user_736",
+      "nickname": "AmberPhoenix",
+      "score": 3290
+    },
+    {
+      "id": "user_737",
+      "nickname": "QuantumLeopard",
+      "score": 2933
+    },
+    {
+      "id": "user_738",
+      "nickname": "IndigoJester",
+      "score": 1303
+    },
+    {
+      "id": "user_739",
+      "nickname": "ZenMiner",
+      "score": 4676
+    },
+    {
+      "id": "user_740",
+      "nickname": "CuriousPhoenix",
+      "score": 2185
+    },
+    {
+      "id": "user_741",
+      "nickname": "QuantumCourier",
+      "score": 1222
+    },
+    {
+      "id": "user_742",
+      "nickname": "NimbleSkipper",
+      "score": 3190
+    },
+    {
+      "id": "user_743",
+      "nickname": "ArcaneHarbinger",
+      "score": 1023
+    },
+    {
+      "id": "user_744",
+      "nickname": "ThunderStallion",
+      "score": 3149
+    },
+    {
+      "id": "user_745",
+      "nickname": "PluckySamurai",
+      "score": 4771
+    },
+    {
+      "id": "user_746",
+      "nickname": "CopperMonk",
+      "score": 1475
+    },
+    {
+      "id": "user_747",
+      "nickname": "PhantomPaladin",
+      "score": 1838
+    },
+    {
+      "id": "user_748",
+      "nickname": "OnyxSentinel",
+      "score": 4941
+    },
+    {
+      "id": "user_749",
+      "nickname": "ThunderDruid",
+      "score": 1429
+    },
+    {
+      "id": "user_750",
+      "nickname": "ShadowCheetah",
+      "score": 3076
+    },
+    {
+      "id": "user_751",
+      "nickname": "CrimsonBaron",
+      "score": 2864
+    },
+    {
+      "id": "user_752",
+      "nickname": "NeonCobra",
+      "score": 1885
+    },
+    {
+      "id": "user_753",
+      "nickname": "IvoryScorpion",
+      "score": 3101
+    },
+    {
+      "id": "user_754",
+      "nickname": "LunarWolf",
+      "score": 3054
+    },
+    {
+      "id": "user_755",
+      "nickname": "EagerDruid",
+      "score": 2904
+    },
+    {
+      "id": "user_756",
+      "nickname": "CrystalPhantom",
+      "score": 916
+    },
+    {
+      "id": "user_757",
+      "nickname": "ScarletSeeker",
+      "score": 1713
+    },
+    {
+      "id": "user_758",
+      "nickname": "TranquilWraith",
+      "score": 2230
+    },
+    {
+      "id": "user_759",
+      "nickname": "TitanTitan",
+      "score": 2038
+    },
+    {
+      "id": "user_760",
+      "nickname": "MistyBard",
+      "score": 4458
+    },
+    {
+      "id": "user_761",
+      "nickname": "EagerCobra",
+      "score": 3829
+    },
+    {
+      "id": "user_762",
+      "nickname": "ZestySentinel",
+      "score": 2236
+    },
+    {
+      "id": "user_763",
+      "nickname": "QuantumRaven",
+      "score": 2940
+    },
+    {
+      "id": "user_764",
+      "nickname": "PhantomRonin",
+      "score": 2734
+    },
+    {
+      "id": "user_765",
+      "nickname": "WittySpecter",
+      "score": 4772
+    },
+    {
+      "id": "user_766",
+      "nickname": "DuskSailor",
+      "score": 2281
+    },
+    {
+      "id": "user_767",
+      "nickname": "BriskAssassin",
+      "score": 1071
+    },
+    {
+      "id": "user_768",
+      "nickname": "ArcticScorpion",
+      "score": 3608
+    },
+    {
+      "id": "user_769",
+      "nickname": "BrittleBadger",
+      "score": 1491
+    },
+    {
+      "id": "user_770",
+      "nickname": "ArcticArcher",
+      "score": 1988
+    },
+    {
+      "id": "user_771",
+      "nickname": "EchoBasilisk",
+      "score": 2062
+    },
+    {
+      "id": "user_772",
+      "nickname": "CrystalCobra",
+      "score": 4862
+    },
+    {
+      "id": "user_773",
+      "nickname": "CobaltScorpion",
+      "score": 4182
+    },
+    {
+      "id": "user_774",
+      "nickname": "VelvetSpecter",
+      "score": 3938
+    },
+    {
+      "id": "user_775",
+      "nickname": "OnyxBerserker",
+      "score": 2749
+    },
+    {
+      "id": "user_776",
+      "nickname": "LunarFox",
+      "score": 4405
+    },
+    {
+      "id": "user_777",
+      "nickname": "CuriousAlchemist",
+      "score": 2170
+    },
+    {
+      "id": "user_778",
+      "nickname": "WhisperSage",
+      "score": 2527
+    },
+    {
+      "id": "user_779",
+      "nickname": "PluckyVoyager",
+      "score": 3626
+    },
+    {
+      "id": "user_780",
+      "nickname": "ZestyBasilisk",
+      "score": 1245
+    },
+    {
+      "id": "user_781",
+      "nickname": "EchoPaladin",
+      "score": 2965
+    },
+    {
+      "id": "user_782",
+      "nickname": "DawnKraken",
+      "score": 1750
+    },
+    {
+      "id": "user_783",
+      "nickname": "QuantumWolf",
+      "score": 1230
+    },
+    {
+      "id": "user_784",
+      "nickname": "ArcaneGuardian",
+      "score": 2172
+    },
+    {
+      "id": "user_785",
+      "nickname": "SolarJaguar",
+      "score": 4601
+    },
+    {
+      "id": "user_786",
+      "nickname": "RogueAlchemist",
+      "score": 4066
+    },
+    {
+      "id": "user_787",
+      "nickname": "RoyalBasilisk",
+      "score": 4701
+    },
+    {
+      "id": "user_788",
+      "nickname": "BlazingKraken",
+      "score": 3268
+    },
+    {
+      "id": "user_789",
+      "nickname": "WildEagle",
+      "score": 4701
+    },
+    {
+      "id": "user_790",
+      "nickname": "GallantPanther",
+      "score": 2714
+    },
+    {
+      "id": "user_791",
+      "nickname": "TurboKnight",
+      "score": 3911
+    },
+    {
+      "id": "user_792",
+      "nickname": "InfernoGuardian",
+      "score": 3995
+    },
+    {
+      "id": "user_793",
+      "nickname": "BoldEngineer",
+      "score": 4687
+    },
+    {
+      "id": "user_794",
+      "nickname": "DuskShark",
+      "score": 2951
+    },
+    {
+      "id": "user_795",
+      "nickname": "IronDragon",
+      "score": 1989
+    },
+    {
+      "id": "user_796",
+      "nickname": "GallantSkipper",
+      "score": 4361
+    },
+    {
+      "id": "me",
+      "nickname": "Me",
+      "score": 3881
+    },
+    {
+      "id": "user_797",
+      "nickname": "SilentAlchemist",
+      "score": 897
+    },
+    {
+      "id": "user_798",
+      "nickname": "QuantumMiner",
+      "score": 3165
+    },
+    {
+      "id": "user_799",
+      "nickname": "TurboMage",
+      "score": 4476
+    },
+    {
+      "id": "user_800",
+      "nickname": "BrittlePanther",
+      "score": 3929
+    },
+    {
+      "id": "user_801",
+      "nickname": "SavageArcher",
+      "score": 3386
+    },
+    {
+      "id": "user_802",
+      "nickname": "SwiftMiner",
+      "score": 1136
+    },
+    {
+      "id": "user_803",
+      "nickname": "WittyOtter",
+      "score": 1597
+    },
+    {
+      "id": "user_804",
+      "nickname": "CopperPhantom",
+      "score": 3698
+    },
+    {
+      "id": "user_805",
+      "nickname": "OmegaViper",
+      "score": 4337
+    },
+    {
+      "id": "user_806",
+      "nickname": "PolarCourier",
+      "score": 3033
+    },
+    {
+      "id": "user_807",
+      "nickname": "BriskShark",
+      "score": 3544
+    },
+    {
+      "id": "user_808",
+      "nickname": "CosmicCoyote",
+      "score": 3014
+    },
+    {
+      "id": "user_809",
+      "nickname": "DawnPrince",
+      "score": 2987
+    },
+    {
+      "id": "user_810",
+      "nickname": "ProtoArtisan",
+      "score": 1605
+    },
+    {
+      "id": "user_811",
+      "nickname": "NimbleShark",
+      "score": 2891
+    },
+    {
+      "id": "user_812",
+      "nickname": "RoyalCheetah",
+      "score": 4004
+    },
+    {
+      "id": "user_813",
+      "nickname": "AmberBadger",
+      "score": 4577
+    },
+    {
+      "id": "user_814",
+      "nickname": "MistyScorpion",
+      "score": 2780
+    },
+    {
+      "id": "user_815",
+      "nickname": "ProtoGuardian",
+      "score": 2396
+    },
+    {
+      "id": "user_816",
+      "nickname": "NobleViper",
+      "score": 3564
+    },
+    {
+      "id": "user_817",
+      "nickname": "PluckyCheetah",
+      "score": 2273
+    },
+    {
+      "id": "user_818",
+      "nickname": "OnyxSailor",
+      "score": 3366
+    },
+    {
+      "id": "user_819",
+      "nickname": "WildSkipper",
+      "score": 886
+    },
+    {
+      "id": "user_820",
+      "nickname": "RapidHydra",
+      "score": 869
+    },
+    {
+      "id": "user_821",
+      "nickname": "OnyxPrince",
+      "score": 1356
+    },
+    {
+      "id": "user_822",
+      "nickname": "BlazingSailor",
+      "score": 897
+    },
+    {
+      "id": "user_823",
+      "nickname": "CrystalDuke",
+      "score": 4168
+    },
+    {
+      "id": "user_824",
+      "nickname": "GlacierPaladin",
+      "score": 1600
+    },
+    {
+      "id": "user_825",
+      "nickname": "BoldFalcon",
+      "score": 1651
+    },
+    {
+      "id": "user_826",
+      "nickname": "EchoScholar",
+      "score": 4453
+    },
+    {
+      "id": "user_827",
+      "nickname": "VortexSamurai",
+      "score": 3679
+    },
+    {
+      "id": "user_828",
+      "nickname": "AmberMustang",
+      "score": 2597
+    },
+    {
+      "id": "user_829",
+      "nickname": "DawnMonk",
+      "score": 3120
+    },
+    {
+      "id": "user_830",
+      "nickname": "TitanSpecter",
+      "score": 2863
+    },
+    {
+      "id": "user_831",
+      "nickname": "GallantSailor",
+      "score": 2381
+    },
+    {
+      "id": "user_832",
+      "nickname": "ShadowLynx",
+      "score": 1078
+    },
+    {
+      "id": "user_833",
+      "nickname": "SlyFalcon",
+      "score": 994
+    },
+    {
+      "id": "user_834",
+      "nickname": "GlacierSeeker",
+      "score": 1553
+    },
+    {
+      "id": "user_835",
+      "nickname": "VortexFox",
+      "score": 1265
+    },
+    {
+      "id": "user_836",
+      "nickname": "SavageEngineer",
+      "score": 2576
+    },
+    {
+      "id": "user_837",
+      "nickname": "GoldenMiner",
+      "score": 1797
+    },
+    {
+      "id": "user_838",
+      "nickname": "SilentGolem",
+      "score": 1782
+    },
+    {
+      "id": "user_839",
+      "nickname": "QuantumKnight",
+      "score": 1507
+    },
+    {
+      "id": "user_840",
+      "nickname": "BrightNomad",
+      "score": 1864
+    },
+    {
+      "id": "user_841",
+      "nickname": "ZestySage",
+      "score": 3879
+    },
+    {
+      "id": "user_842",
+      "nickname": "GoldenDragon",
+      "score": 2313
+    },
+    {
+      "id": "user_843",
+      "nickname": "ObsidianOtter",
+      "score": 1708
+    },
+    {
+      "id": "user_844",
+      "nickname": "InfernoScribe",
+      "score": 2309
+    },
+    {
+      "id": "user_845",
+      "nickname": "HollowArcher",
+      "score": 2875
+    },
+    {
+      "id": "user_846",
+      "nickname": "DuskWraith",
+      "score": 3213
+    },
+    {
+      "id": "user_847",
+      "nickname": "QuantumSeeker",
+      "score": 4625
+    },
+    {
+      "id": "user_848",
+      "nickname": "ZestyGuardian",
+      "score": 1420
+    },
+    {
+      "id": "user_849",
+      "nickname": "BrittlePaladin",
+      "score": 4514
+    },
+    {
+      "id": "user_850",
+      "nickname": "SavageDragon",
+      "score": 3064
+    },
+    {
+      "id": "user_851",
+      "nickname": "BrightDragon",
+      "score": 4297
+    },
+    {
+      "id": "user_852",
+      "nickname": "IvoryHarbinger",
+      "score": 3449
+    },
+    {
+      "id": "user_853",
+      "nickname": "IvoryMonk",
+      "score": 2908
+    },
+    {
+      "id": "user_854",
+      "nickname": "InfernoFalcon",
+      "score": 2126
+    },
+    {
+      "id": "user_855",
+      "nickname": "TurboSmith",
+      "score": 1406
+    },
+    {
+      "id": "user_856",
+      "nickname": "StormKing",
+      "score": 3071
+    },
+    {
+      "id": "user_857",
+      "nickname": "ScarletEagle",
+      "score": 1311
+    },
+    {
+      "id": "user_858",
+      "nickname": "DeltaSailor",
+      "score": 3935
+    },
+    {
+      "id": "user_859",
+      "nickname": "BetaMantis",
+      "score": 3983
+    },
+    {
+      "id": "user_860",
+      "nickname": "ObsidianBard",
+      "score": 3525
+    },
+    {
+      "id": "user_861",
+      "nickname": "GhostViper",
+      "score": 1292
+    },
+    {
+      "id": "user_862",
+      "nickname": "ArcaneSeeker",
+      "score": 2915
+    },
+    {
+      "id": "user_863",
+      "nickname": "ArcticCheetah",
+      "score": 2968
+    },
+    {
+      "id": "user_864",
+      "nickname": "ProtoSeeker",
+      "score": 2257
+    },
+    {
+      "id": "user_865",
+      "nickname": "DawnReaper",
+      "score": 4409
+    },
+    {
+      "id": "user_866",
+      "nickname": "VelvetJaguar",
+      "score": 1368
+    },
+    {
+      "id": "user_867",
+      "nickname": "EchoPilot",
+      "score": 4828
+    },
+    {
+      "id": "user_868",
+      "nickname": "NimbleWarden",
+      "score": 2443
+    },
+    {
+      "id": "user_869",
+      "nickname": "CrimsonFalcon",
+      "score": 4016
+    },
+    {
+      "id": "user_870",
+      "nickname": "ArcticKraken",
+      "score": 2261
+    },
+    {
+      "id": "user_871",
+      "nickname": "RoyalWolf",
+      "score": 4830
+    },
+    {
+      "id": "user_872",
+      "nickname": "CosmicRonin",
+      "score": 1688
+    },
+    {
+      "id": "user_873",
+      "nickname": "ProtoRaven",
+      "score": 1978
+    },
+    {
+      "id": "user_874",
+      "nickname": "OmegaFalcon",
+      "score": 4332
+    },
+    {
+      "id": "user_875",
+      "nickname": "StoutHawk",
+      "score": 2589
+    },
+    {
+      "id": "user_876",
+      "nickname": "PolarMantis",
+      "score": 1670
+    },
+    {
+      "id": "user_877",
+      "nickname": "BrightArcher",
+      "score": 4417
+    },
+    {
+      "id": "user_878",
+      "nickname": "PrimeBard",
+      "score": 2921
+    },
+    {
+      "id": "user_879",
+      "nickname": "PolarFalcon",
+      "score": 1646
+    },
+    {
+      "id": "user_880",
+      "nickname": "PluckyPanther",
+      "score": 1085
+    },
+    {
+      "id": "user_881",
+      "nickname": "SlyBear",
+      "score": 1397
+    },
+    {
+      "id": "user_882",
+      "nickname": "ZestyTemplar",
+      "score": 1376
+    },
+    {
+      "id": "user_883",
+      "nickname": "AmberSage",
+      "score": 2852
+    },
+    {
+      "id": "user_884",
+      "nickname": "NobleProphet",
+      "score": 4452
+    },
+    {
+      "id": "user_885",
+      "nickname": "BlazingTiger",
+      "score": 953
+    },
+    {
+      "id": "user_886",
+      "nickname": "BriskScorpion",
+      "score": 4877
+    },
+    {
+      "id": "user_887",
+      "nickname": "DeltaSpecter",
+      "score": 2019
+    },
+    {
+      "id": "user_888",
+      "nickname": "NightBadger",
+      "score": 807
+    },
+    {
+      "id": "user_889",
+      "nickname": "CuriousBasilisk",
+      "score": 1109
+    },
+    {
+      "id": "user_890",
+      "nickname": "AmberRaven",
+      "score": 3998
+    },
+    {
+      "id": "user_891",
+      "nickname": "StealthBasilisk",
+      "score": 2982
+    },
+    {
+      "id": "user_892",
+      "nickname": "VelvetOracle",
+      "score": 2041
+    },
+    {
+      "id": "user_893",
+      "nickname": "SlyPilot",
+      "score": 3501
+    },
+    {
+      "id": "user_894",
+      "nickname": "MistySage",
+      "score": 4005
+    },
+    {
+      "id": "user_895",
+      "nickname": "CobaltMage",
+      "score": 830
+    },
+    {
+      "id": "user_896",
+      "nickname": "CopperNinja",
+      "score": 4819
+    },
+    {
+      "id": "user_897",
+      "nickname": "CrimsonHydra",
+      "score": 4716
+    },
+    {
+      "id": "user_898",
+      "nickname": "GoldenMage",
+      "score": 4372
+    },
+    {
+      "id": "user_899",
+      "nickname": "BrittleSmith",
+      "score": 4108
+    },
+    {
+      "id": "user_900",
+      "nickname": "DeltaJaguar",
+      "score": 1374
+    },
+    {
+      "id": "user_901",
+      "nickname": "NexusScorpion",
+      "score": 2650
+    },
+    {
+      "id": "user_902",
+      "nickname": "GhostMantis",
+      "score": 827
+    },
+    {
+      "id": "user_903",
+      "nickname": "NovaTiger",
+      "score": 3949
+    },
+    {
+      "id": "user_904",
+      "nickname": "InfernoRonin",
+      "score": 4749
+    },
+    {
+      "id": "user_905",
+      "nickname": "ZestySkipper",
+      "score": 1792
+    },
+    {
+      "id": "user_906",
+      "nickname": "FrostKnight",
+      "score": 3740
+    },
+    {
+      "id": "user_907",
+      "nickname": "ArcaneWarden",
+      "score": 3531
+    },
+    {
+      "id": "user_908",
+      "nickname": "AmberBerserker",
+      "score": 3280
+    },
+    {
+      "id": "user_909",
+      "nickname": "QuantumFox",
+      "score": 4081
+    },
+    {
+      "id": "user_910",
+      "nickname": "SilentHawk",
+      "score": 1252
+    },
+    {
+      "id": "user_911",
+      "nickname": "PolarOtter",
+      "score": 1542
+    },
+    {
+      "id": "user_912",
+      "nickname": "ZenDuke",
+      "score": 3792
+    },
+    {
+      "id": "user_913",
+      "nickname": "SwiftOracle",
+      "score": 3585
+    },
+    {
+      "id": "user_914",
+      "nickname": "IronGolem",
+      "score": 1459
+    },
+    {
+      "id": "user_915",
+      "nickname": "AmberEngineer",
+      "score": 4565
+    },
+    {
+      "id": "user_916",
+      "nickname": "TranquilScribe",
+      "score": 3175
+    },
+    {
+      "id": "user_917",
+      "nickname": "DeltaPrince",
+      "score": 2463
+    },
+    {
+      "id": "user_918",
+      "nickname": "EagerFox",
+      "score": 2246
+    },
+    {
+      "id": "user_919",
+      "nickname": "ObsidianHermit",
+      "score": 1122
+    },
+    {
+      "id": "user_920",
+      "nickname": "NeonDuke",
+      "score": 3947
+    },
+    {
+      "id": "user_921",
+      "nickname": "IronArtisan",
+      "score": 2364
+    },
+    {
+      "id": "user_922",
+      "nickname": "DeltaAlchemist",
+      "score": 3248
+    },
+    {
+      "id": "user_923",
+      "nickname": "MistyHarbinger",
+      "score": 3995
+    },
+    {
+      "id": "user_924",
+      "nickname": "SilentKnight",
+      "score": 1674
+    },
+    {
+      "id": "user_925",
+      "nickname": "GlacierSamurai",
+      "score": 3743
+    },
+    {
+      "id": "user_926",
+      "nickname": "EmeraldEngineer",
+      "score": 4785
+    },
+    {
+      "id": "user_927",
+      "nickname": "PrimeFox",
+      "score": 1495
+    },
+    {
+      "id": "user_928",
+      "nickname": "DeltaRanger",
+      "score": 4387
+    },
+    {
+      "id": "user_929",
+      "nickname": "IronProphet",
+      "score": 2352
+    },
+    {
+      "id": "user_930",
+      "nickname": "BrightQueen",
+      "score": 1946
+    },
+    {
+      "id": "user_931",
+      "nickname": "VioletSamurai",
+      "score": 1092
+    },
+    {
+      "id": "user_932",
+      "nickname": "GhostPhantom",
+      "score": 2381
+    },
+    {
+      "id": "user_933",
+      "nickname": "CosmicHydra",
+      "score": 1007
+    },
+    {
+      "id": "user_934",
+      "nickname": "DuskBerserker",
+      "score": 2753
+    },
+    {
+      "id": "user_935",
+      "nickname": "AlphaDuke",
+      "score": 4807
+    },
+    {
+      "id": "user_936",
+      "nickname": "EmeraldGuardian",
+      "score": 3984
+    },
+    {
+      "id": "user_937",
+      "nickname": "TranquilDruid",
+      "score": 1316
+    },
+    {
+      "id": "user_938",
+      "nickname": "LunarScorpion",
+      "score": 3320
+    },
+    {
+      "id": "user_939",
+      "nickname": "StormPuma",
+      "score": 4893
+    },
+    {
+      "id": "user_940",
+      "nickname": "VelvetEagle",
+      "score": 4480
+    },
+    {
+      "id": "user_941",
+      "nickname": "IronBasilisk",
+      "score": 934
+    },
+    {
+      "id": "user_942",
+      "nickname": "CrystalPuma",
+      "score": 1103
+    },
+    {
+      "id": "user_943",
+      "nickname": "PhantomMustang",
+      "score": 3579
+    },
+    {
+      "id": "user_944",
+      "nickname": "ObsidianBadger",
+      "score": 1259
+    },
+    {
+      "id": "user_945",
+      "nickname": "ObsidianFox",
+      "score": 3566
+    },
+    {
+      "id": "user_946",
+      "nickname": "CrystalEmpress",
+      "score": 1150
+    },
+    {
+      "id": "user_947",
+      "nickname": "IndigoHawk",
+      "score": 4121
+    },
+    {
+      "id": "user_948",
+      "nickname": "PluckyMage",
+      "score": 1768
+    },
+    {
+      "id": "user_949",
+      "nickname": "DeltaPuma",
+      "score": 2534
+    },
+    {
+      "id": "user_950",
+      "nickname": "EmeraldViper",
+      "score": 4554
+    },
+    {
+      "id": "user_951",
+      "nickname": "SwiftBerserker",
+      "score": 2020
+    },
+    {
+      "id": "user_952",
+      "nickname": "AzurePilot",
+      "score": 2708
+    },
+    {
+      "id": "user_953",
+      "nickname": "ProtoProphet",
+      "score": 1390
+    },
+    {
+      "id": "user_954",
+      "nickname": "RadiantDragon",
+      "score": 1102
+    },
+    {
+      "id": "user_955",
+      "nickname": "PhantomAlchemist",
+      "score": 1959
+    },
+    {
+      "id": "user_956",
+      "nickname": "WildScribe",
+      "score": 4805
+    },
+    {
+      "id": "user_957",
+      "nickname": "SilentPhoenix",
+      "score": 956
+    },
+    {
+      "id": "user_958",
+      "nickname": "CopperGuardian",
+      "score": 4660
+    },
+    {
+      "id": "user_959",
+      "nickname": "IronStallion",
+      "score": 1175
+    },
+    {
+      "id": "user_960",
+      "nickname": "SwiftProphet",
+      "score": 2788
+    },
+    {
+      "id": "user_961",
+      "nickname": "OmegaMustang",
+      "score": 1869
+    },
+    {
+      "id": "user_962",
+      "nickname": "BriskHarbinger",
+      "score": 917
+    },
+    {
+      "id": "user_963",
+      "nickname": "ScarletSamurai",
+      "score": 2211
+    },
+    {
+      "id": "user_964",
+      "nickname": "VioletScorpion",
+      "score": 1209
+    },
+    {
+      "id": "user_965",
+      "nickname": "BetaDruid",
+      "score": 3317
+    },
+    {
+      "id": "user_966",
+      "nickname": "VelvetOtter",
+      "score": 1597
+    },
+    {
+      "id": "user_967",
+      "nickname": "NobleLynx",
+      "score": 4537
+    },
+    {
+      "id": "user_968",
+      "nickname": "ZestyLynx",
+      "score": 2198
+    },
+    {
+      "id": "user_969",
+      "nickname": "ThunderGriffin",
+      "score": 1323
+    },
+    {
+      "id": "user_970",
+      "nickname": "IndigoReaper",
+      "score": 1671
+    },
+    {
+      "id": "user_971",
+      "nickname": "HollowEagle",
+      "score": 1735
+    },
+    {
+      "id": "user_972",
+      "nickname": "ZestyMiner",
+      "score": 4872
+    },
+    {
+      "id": "user_973",
+      "nickname": "DawnPanther",
+      "score": 2606
+    },
+    {
+      "id": "user_974",
+      "nickname": "NoblePhoenix",
+      "score": 1316
+    },
+    {
+      "id": "user_975",
+      "nickname": "PhantomSailor",
+      "score": 2460
+    },
+    {
+      "id": "user_976",
+      "nickname": "CobaltViper",
+      "score": 4291
+    },
+    {
+      "id": "user_977",
+      "nickname": "StormTiger",
+      "score": 3563
+    },
+    {
+      "id": "user_978",
+      "nickname": "FrostJaguar",
+      "score": 4093
+    },
+    {
+      "id": "user_979",
+      "nickname": "StormDuke",
+      "score": 3456
+    },
+    {
+      "id": "user_980",
+      "nickname": "PhantomCourier",
+      "score": 1789
+    },
+    {
+      "id": "user_981",
+      "nickname": "BriskBadger",
+      "score": 1925
+    },
+    {
+      "id": "user_982",
+      "nickname": "GhostArcher",
+      "score": 3434
+    },
+    {
+      "id": "user_983",
+      "nickname": "PolarJester",
+      "score": 2546
+    },
+    {
+      "id": "user_984",
+      "nickname": "PhantomQueen",
+      "score": 1173
+    },
+    {
+      "id": "user_985",
+      "nickname": "WildArtisan",
+      "score": 2220
+    },
+    {
+      "id": "user_986",
+      "nickname": "AlphaCourier",
+      "score": 3548
+    },
+    {
+      "id": "user_987",
+      "nickname": "SilentRanger",
+      "score": 1317
+    },
+    {
+      "id": "user_988",
+      "nickname": "BrittleSamurai",
+      "score": 1789
+    },
+    {
+      "id": "user_989",
+      "nickname": "SilentCourier",
+      "score": 3043
+    },
+    {
+      "id": "user_990",
+      "nickname": "ThunderSentinel",
+      "score": 1957
+    },
+    {
+      "id": "user_991",
+      "nickname": "BrightMantis",
+      "score": 4200
+    },
+    {
+      "id": "user_992",
+      "nickname": "CuriousRonin",
+      "score": 2176
+    },
+    {
+      "id": "user_993",
+      "nickname": "CrimsonGolem",
+      "score": 3830
+    },
+    {
+      "id": "user_994",
+      "nickname": "BriskMonk",
+      "score": 2151
+    },
+    {
+      "id": "user_995",
+      "nickname": "BrightGriffin",
+      "score": 4393
+    },
+    {
+      "id": "user_996",
+      "nickname": "ScarletBerserker",
+      "score": 2795
+    },
+    {
+      "id": "user_997",
+      "nickname": "StormCobra",
+      "score": 1133
+    },
+    {
+      "id": "user_998",
+      "nickname": "WickedCheetah",
+      "score": 1892
+    },
+    {
+      "id": "user_999",
+      "nickname": "ScarletRaven",
+      "score": 1618
+    }
+  ]
+}

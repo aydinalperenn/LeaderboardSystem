@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-
 public class RowItemPool
 {
     private Stack<RowItemView> pool;
@@ -12,7 +11,7 @@ public class RowItemPool
     {
         this.prefab = prefab;
         this.parent = parent;
-        this.pool = new Stack<RowItemView>();
+        pool = new Stack<RowItemView>();
 
         for (int i = 0; i < prewarm; i++)
         {

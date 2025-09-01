@@ -7,27 +7,25 @@ public class LeaderboardModel
     private PlayerData me;
     private int meIndex = -1;
 
-    // Dýþ eriþimler
     public List<PlayerData> Players => players;
     public PlayerData Me => me;
     public int MeIndex => meIndex;
 
-    // ----------------- Kurulum -----------------
+
     public void SetData(PlayerList list)
     {
         players = (list != null && list.players != null) ? list.players : new List<PlayerData>();
         ResortAndRerank();
     }
 
-    // ----------------- Sýralama / Rank -----------------
-    /// Skora göre (DESC) sýralar; eþitlikte id (ASC). Rank atar, Me/MeIndex günceller.
+    // - skora göre (desc), eþitlikte id (asc) sýralama
     public void ResortAndRerank()
     {
         players.Sort((a, b) =>
         {
-            int cmp = b.score.CompareTo(a.score);  // DESC
+            int cmp = b.score.CompareTo(a.score);
             if (cmp != 0) return cmp;
-            return string.Compare(a.id, b.id, StringComparison.Ordinal); // eþitlik kýrýcý
+            return string.Compare(a.id, b.id, StringComparison.Ordinal);
         });
 
         for (int i = 0; i < players.Count; i++)
@@ -37,15 +35,13 @@ public class LeaderboardModel
         me = (meIndex >= 0) ? players[meIndex] : null;
     }
 
-    // ----------------- Skor Güncelleme -----------------
-    /// Me’yi kesin deðiþtir + diðerlerini olasýlýkla ± deðiþtir; sonra yeniden sýrala.
+    // - Me dahil skorlarý rastgele deðiþtir ve yeniden sýrala
     public void RandomBumpIncludingMe(
         Random rng,
         int meMin = 5, int meMax = 50,
         int otherMin = 5, int otherMax = 50,
         float changeChance = 1f)
     {
-        // Diðerleri
         for (int i = 0; i < players.Count; i++)
         {
             var p = players[i];
@@ -54,12 +50,11 @@ public class LeaderboardModel
             if (rng.NextDouble() <= changeChance)
             {
                 int d = rng.Next(otherMin, otherMax + 1);
-                if (rng.Next(0, 2) == 0) d = -d; // ± yön
+                if (rng.Next(0, 2) == 0) d = -d;
                 p.score = Math.Max(0, p.score + d);
             }
         }
 
-        // Me – kesin deðiþsin
         if (me != null)
         {
             int d = rng.Next(meMin, meMax + 1);

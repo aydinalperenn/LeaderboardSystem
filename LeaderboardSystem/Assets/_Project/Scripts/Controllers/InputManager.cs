@@ -13,29 +13,27 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        // Mouse
+        // mouse sol týk
         if (Input.GetMouseButtonDown(0))
             TryRaycast(Input.mousePosition);
 
-        // Touch
+        // dokunma
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             TryRaycast(Input.GetTouch(0).position);
     }
 
+    // touch detection
     private void TryRaycast(Vector3 screenPos)
     {
         if (eventCamera == null) return;
 
-        Ray ray = eventCamera.ScreenPointToRay(screenPos);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1000f))
+        var ray = eventCamera.ScreenPointToRay(screenPos);
+        if (Physics.Raycast(ray, out var hit, 1000f)
+            && hit.collider != null
+            && hit.collider.CompareTag(buttonTag)
+            && controller != null)
         {
-            if (hit.collider != null && hit.collider.CompareTag(buttonTag))
-            {
-                // Direkt controller içindeki fonksiyonu çaðýr
-                if (controller != null)
-                    controller.SimulateRandomUpdateAnimated();
-            }
+            controller.SimulateRandomUpdateAnimated();
         }
     }
 }
