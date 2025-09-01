@@ -26,6 +26,12 @@ public class LeaderboardController : MonoBehaviour
     private int visibleCount { get { return Mathf.Min(config.maxVisibleRows, model.Players.Count); } }
     private float rowHeight = 1.0f;
 
+    private bool meZPushed = false;  // Me þu an öne itilmiþ mi?
+    private float meBaseZ = 0f;      // Me'nin orijinal Z'si (ilk kez push'ta set edilir)
+    private bool meBaseZSet = false; // _meBaseZ set edildi mi?
+
+
+
     void Awake()
     {
         // DataSource seçimi
@@ -162,29 +168,24 @@ public class LeaderboardController : MonoBehaviour
         return null;
     }
 
-    private float ComputeContainerYFor(int topIdx)
-    {
-        // Me her zaman merkezde dursun istiyoruz: container Y’sini
-        // "meCenterOffset + (MeIndex - topIdx) * rowHeight" formülüyle hesaplýyoruz.
-        float centerY = config.meCenterOffset;
-        return centerY + (model.MeIndex - topIdx) * rowHeight;
-    }
-
     public void SimulateRandomUpdateAnimated()
     {
         if (rowsContainer == null || config == null) return;
 
+        // aktif sequence ve satýr tweenlerini kes
         if (_animSeq != null && _animSeq.IsActive()) _animSeq.Kill(false);
         KillAllRowTweens(false);
 
-        // (A) Eski deðerler (Me score/rank tween'i için)
+        // (A) Eski Me deðerleri
         int meOldScore = model.Me != null ? model.Me.score : 0;
         int meOldRank = model.Me != null ? model.Me.rank : 0;
         int oldMeIndex = model.MeIndex;
 
         // (B) Modeli güncelle (Me dahil)
         System.Random rng = new System.Random();
-        model.RandomBumpIncludingMe(rng, meMin: 5, meMax: 50, otherMin: 5, otherMax: 50, changeChance: 1f);
+        model.RandomBumpIncludingMe(rng, meMin: 5, meMax: 50,
+                                    otherMin: 5, otherMax: 50,
+                                    changeChance: 1f);
 
         // (C) Yeni deðerler
         int meNewScore = model.Me != null ? model.Me.score : meOldScore;
@@ -192,13 +193,13 @@ public class LeaderboardController : MonoBehaviour
         int newMeIndex = model.MeIndex;
 
         int newTop = ComputeTopIndex(newMeIndex, model.Players.Count, config.maxVisibleRows);
-        int deltaRows = oldMeIndex - newMeIndex;                 // + ise Me yukarý çýktý
-        float shift = -deltaRows * rowHeight;                  // diðerleri bu kadar kayacak
+        int deltaRows = oldMeIndex - newMeIndex;
+        float shift = -deltaRows * rowHeight;
 
-        //  ÖNCE ÝÇERÝÐÝ GÜNCELLE + BAÞLANGIÇ POZÝSYONLARINI AYARLA
+        // içerikleri baðla + baþlangýç pozisyonlarýný ayarla
         PrebindWindowForAnimation(newTop, deltaRows);
 
-        // (D) Me view’ýný bul ve label tween (score/rank) baþlat
+        // (D) Me view: label tween
         var meView = FindMeViewInChildren();
         if (meView != null)
         {
@@ -209,13 +210,48 @@ public class LeaderboardController : MonoBehaviour
             meView.AnimateScoreInt(meOldScore, meNewScore, dur, ease);
         }
 
-        // (E) Diðer satýrlarý shift kadar tween’le (Me sabit)
+        // ---- Z-POP: Me sadece ilk kez öne gitsin ----
+        const float meZOffset = 1.5f;
+        const float meZDuration = 0.25f;
+
+        if (meView != null)
+        {
+            if (!meBaseZSet)
+            {
+                meBaseZ = meView.transform.localPosition.z;
+                meBaseZSet = true;
+            }
+
+            if (!meZPushed)
+            {
+                meZPushed = true;
+                meView.transform
+                      .DOLocalMoveZ(meBaseZ - meZOffset, meZDuration)
+                      .SetEase(Ease.OutQuad)
+                      .SetTarget(meView);
+            }
+        }
+
+        // (E) Diðer satýrlarý hareket ettir (Me sabit)
         int vis = VisibleNow();
         bool anyTween = false;
         _animSeq = DOTween.Sequence();
 
         if (deltaRows == 0)
         {
+            // kayma yok - belirli süre sonra geri çek
+            if (meView != null)
+            {
+                float wait = Mathf.Max(0.01f, config.containerMoveDuration);
+                DOVirtual.DelayedCall(wait, () =>
+                {
+                    meView.transform.DOLocalMoveZ(meBaseZ, meZDuration)
+                                    .SetEase(Ease.InQuad)
+                                    .SetTarget(meView);
+                    meZPushed = false;
+                }).SetTarget(meView);
+            }
+
             if (meView != null)
                 meView.transform.DOPunchScale(Vector3.one * 0.06f, 0.25f, 6, 0.5f);
 
@@ -226,7 +262,7 @@ public class LeaderboardController : MonoBehaviour
                    .OnComplete(() =>
                    {
                        topIndex = newTop;
-                       BindWindow(false); // içerik zaten doðru, bu sadece garanti snap
+                       BindWindow(false);
                    });
             return;
         }
@@ -235,9 +271,9 @@ public class LeaderboardController : MonoBehaviour
         {
             var view = GetViewAt(j);
             if (view == null) continue;
-            if (view.isMe) continue; // Me tweenlenmiyor
+            if (view.isMe) continue;
 
-            float endY = -(j * rowHeight); // hedef slotun tam yeri
+            float endY = -(j * rowHeight);
             _animSeq.Join(
                 view.transform
                     .DOLocalMoveY(endY, config.containerMoveDuration)
@@ -251,7 +287,16 @@ public class LeaderboardController : MonoBehaviour
             _animSeq.OnComplete(() =>
             {
                 topIndex = newTop;
-                BindWindow(false); // tek seferde snap/garanti
+                BindWindow(false);
+
+                if (meView != null)
+                {
+                    meView.transform.DOLocalMoveZ(meBaseZ, meZDuration)
+                                    .SetEase(Ease.InQuad)
+                                    .SetTarget(meView);
+                }
+
+                meZPushed = false; // tekrar kullanýlabilir
                 _animSeq = null;
             });
         }
@@ -259,10 +304,17 @@ public class LeaderboardController : MonoBehaviour
         {
             topIndex = newTop;
             BindWindow(false);
+
+            if (meView != null)
+            {
+                meView.transform.DOLocalMoveZ(meBaseZ, meZDuration)
+                                .SetEase(Ease.InQuad)
+                                .SetTarget(meView);
+            }
+            meZPushed = false;
             _animSeq = null;
         }
     }
-
 
 
 
@@ -330,7 +382,7 @@ public class LeaderboardController : MonoBehaviour
             {
                 view.SetAlpha(0f);
                 // 1 sn sonra görünür yap (bu delayed iþleme view'ý target veriyoruz ki kill'lenebilsin)
-                DOVirtual.DelayedCall(0.45f, () =>
+                DOVirtual.DelayedCall(0.50f, () =>
                 {
                     if (view != null) view.SetAlpha(1f);
                 }).SetTarget(view);
