@@ -40,9 +40,9 @@ public class LeaderboardController : MonoBehaviour
         var list = dataSource.Load();
         model.SetData(list);
 
-        Debug.Log($"[Leaderboard] Loaded {model.Players.Count} players. Me={model.Me?.nickname} Rank={model.Me?.rank}");
+        //Debug.Log($"[Leaderboard] Loaded {model.Players.Count} players. Me={model.Me?.nickname} Rank={model.Me?.rank}");
         foreach (var p in model.Players)
-            Debug.Log($"Player ID={p.id}, Nickname={p.nickname}, Score={p.score}, Rank={p.rank}");
+            //Debug.Log($"Player ID={p.id}, Nickname={p.nickname}, Score={p.score}, Rank={p.rank}");
 
         // - prefab ve ölçüleri hazýrla
         if (rowPrefab == null && config != null && config.rowItemPrefab != null)

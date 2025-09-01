@@ -14,6 +14,6 @@ public class JsonLoader : MonoBehaviour
         var list = JsonUtility.FromJson<PlayerList>(source);
         Model.SetData(list);
 
-        Debug.Log($"Loaded {Model.Players.Count} players. MeIndex={Model.MeIndex}, MeRank={Model.Me?.rank}");
+        //Debug.Log($"Loaded {Model.Players.Count} players. MeIndex={Model.MeIndex}, MeRank={Model.Me?.rank}");
     }
 }
