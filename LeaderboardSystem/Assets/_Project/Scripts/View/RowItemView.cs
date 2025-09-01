@@ -13,10 +13,14 @@ public class RowItemView : MonoBehaviour
 
     [Header("Highlight")]
     [SerializeField] private Renderer highlightRenderer;
+    [SerializeField] private Material meMaterial;
+    [SerializeField] private Material frameMaterial;
 
     [Header("Layout")]
     [SerializeField] private float rowHeight = 1.0f;
+    [SerializeField] private float rowSpacing = 0.10f; // satýrlar arasý boþluk (EKLENDÝ)
     public float RowHeight => rowHeight;
+    public float Step => rowHeight + rowSpacing;
 
     private Transform tr;
 
@@ -43,7 +47,14 @@ public class RowItemView : MonoBehaviour
         if (nicknameText != null) nicknameText.text = data.nickname;
         if (scoreText != null) scoreText.text = data.score.ToString("N0", CultureInfo.InvariantCulture);
 
-        if (highlightRenderer != null) highlightRenderer.enabled = isMe;
+        // highlightRenderer artýk kapatýlmýyor, sadece material atanýyor
+        if (highlightRenderer != null)
+        {
+            if (isMe && meMaterial != null)
+                highlightRenderer.material = meMaterial;
+            else if (!isMe && frameMaterial != null)
+                highlightRenderer.material = frameMaterial;
+        }
 
         this.isMe = isMe;
     }

@@ -23,28 +23,28 @@ public class LeaderboardController : MonoBehaviour
     private RowItemPool pool;
     private int topIndex = 0;
     private int visibleCount { get { return Mathf.Min(config.maxVisibleRows, model.Players.Count); } }
-    private float rowHeight = 1.0f;
 
+    // Spacing'i de içeren satýr adýmý (rowHeight + rowSpacing)
+    private float rowStep = 1.0f;
+
+    // Me'yi Z ekseninde öne/arkaya itmek için
     private bool meZPushed = false;
     private float meBaseZ = 0f;
     private bool meBaseZSet = false;
 
     void Awake()
     {
-        // - veri kaynaðýný sýrayla seç ve modeli doldur
+        // Veri kaynaðýný sýrayla seç
         if (jsonFile != null) dataSource = new TextAssetDataSource(jsonFile);
         else if (!string.IsNullOrEmpty(jsonText)) dataSource = new JsonTextDataSource(jsonText);
         else if (config != null && config.defaultJson != null) dataSource = new TextAssetDataSource(config.defaultJson);
         else dataSource = new JsonTextDataSource("{}");
 
+        // Modele aktar
         var list = dataSource.Load();
         model.SetData(list);
 
-        //Debug.Log($"[Leaderboard] Loaded {model.Players.Count} players. Me={model.Me?.nickname} Rank={model.Me?.rank}");
-        foreach (var p in model.Players)
-            //Debug.Log($"Player ID={p.id}, Nickname={p.nickname}, Score={p.score}, Rank={p.rank}");
-
-        // - prefab ve ölçüleri hazýrla
+        // Prefab referansýný config'ten doldur
         if (rowPrefab == null && config != null && config.rowItemPrefab != null)
             rowPrefab = config.rowItemPrefab.GetComponent<RowItemView>();
 
@@ -54,18 +54,20 @@ public class LeaderboardController : MonoBehaviour
             return;
         }
 
-        rowHeight = rowPrefab.RowHeight;
+        // Satýr adýmý: rowHeight + rowSpacing
+        rowStep = rowPrefab.Step;
 
-        // - sadece pool kullanarak görünür satýrlarý üret ve hizala
+        // Pool'u hazýrla ve görünür slotlarý oluþtur
         pool = new RowItemPool(rowPrefab, rowsContainer, prewarm: visibleCount);
         SpawnInitialRows();
 
+        // Me ortalanacak þekilde pencere baþlangýcý
         topIndex = ComputeTopIndex(model.MeIndex, model.Players.Count, config.maxVisibleRows);
         BindWindow(false);
         CenterOnMe(false);
     }
 
-    // - görünür slot kadar child oluþtur ve konumlarýný baþlangýçta sabitle
+    // Baþlangýçta görünür slot kadar child oluþtur ve konumlarý sabitle
     private void SpawnInitialRows()
     {
         int need = visibleCount - rowsContainer.childCount;
@@ -81,7 +83,7 @@ public class LeaderboardController : MonoBehaviour
         for (int i = 0; i < childCount; i++)
         {
             var view = GetViewAt(i);
-            float y = -(i * rowHeight);
+            float y = -(i * rowStep);
             view.SnapTo(y);
         }
     }
@@ -96,7 +98,7 @@ public class LeaderboardController : MonoBehaviour
         return rowsContainer.GetChild(i).GetComponent<RowItemView>();
     }
 
-    // - data penceresini mevcut topIndex'le görünür slotlara baðlar
+    // Data penceresini mevcut topIndex ile görünür slotlara baðlar
     private void BindWindow(bool animated, bool skipMeDuringAnimation = false)
     {
         int vis = VisibleNow();
@@ -118,18 +120,18 @@ public class LeaderboardController : MonoBehaviour
             view.gameObject.SetActive(true);
             view.Bind(data, isMe);
 
-            float targetY = -(i * rowHeight);
+            float targetY = -(i * rowStep);
             view.SnapTo(targetY);
         }
     }
 
-    // - container'ý Me hedef noktasýna taþýr (Me görselde ortada kalýr)
+    // Container'ý Me hedef noktasýna taþýr (Me görselde sabit/ortada kalýr)
     private void CenterOnMe(bool animated)
     {
         if (rowsContainer == null || model.MeIndex < 0 || config == null) return;
 
         float centerY = config.meCenterOffset;
-        float y = centerY + (model.MeIndex - topIndex) * rowHeight;
+        float y = centerY + (model.MeIndex - topIndex) * rowStep;
 
         if (animated)
             rowsContainer.DOLocalMoveY(y, config.containerMoveDuration).SetEase(config.containerEase);
@@ -140,7 +142,7 @@ public class LeaderboardController : MonoBehaviour
         }
     }
 
-    // - Me'yi ortalayacak üst indeks hesabý
+    // Me'yi ortalayacak üst indeks hesabý
     private int ComputeTopIndex(int meIndex, int total, int maxVisible)
     {
         int half = (maxVisible - 1) / 2;
@@ -148,7 +150,7 @@ public class LeaderboardController : MonoBehaviour
         return Mathf.Clamp(idealTop, 0, Mathf.Max(0, total - maxVisible));
     }
 
-    // - görünür çocuklarda Me view'ýný bulur
+    // Görünür çocuklarda Me view'ýný bulur
     private RowItemView FindMeViewInChildren()
     {
         int vis = VisibleNow();
@@ -161,7 +163,7 @@ public class LeaderboardController : MonoBehaviour
         return null;
     }
 
-    // - skor/rank rastgele güncelle, non-Me satýrlarý kaydýrarak Me'yi sabit tut
+    // Skor/rank rastgele güncelle, non-Me satýrlarý kaydýrarak Me'yi sabit tut
     public void SimulateRandomUpdateAnimated()
     {
         if (rowsContainer == null || config == null) return;
@@ -174,7 +176,7 @@ public class LeaderboardController : MonoBehaviour
         int oldMeIndex = model.MeIndex;
 
         System.Random rng = new System.Random();
-        model.RandomBumpIncludingMe(rng, meMin: 5, meMax: 50, otherMin: 5, otherMax: 50, changeChance: 1f);
+        model.RandomBumpIncludingMe(rng, meMin: 5, meMax: 30, otherMin: 5, otherMax: 30, changeChance: 5f);
 
         int meNewScore = model.Me != null ? model.Me.score : meOldScore;
         int meNewRank = model.Me != null ? model.Me.rank : meOldRank;
@@ -182,10 +184,11 @@ public class LeaderboardController : MonoBehaviour
 
         int newTop = ComputeTopIndex(newMeIndex, model.Players.Count, config.maxVisibleRows);
         int deltaRows = oldMeIndex - newMeIndex;
-        float shift = -deltaRows * rowHeight; // - bilerek tutuyorum (davranýþ deðiþmesin)
 
+        // Yeni pencere için bind + baþlangýç konumlarý
         PrebindWindowForAnimation(newTop, deltaRows);
 
+        // Me etiket tweenleri
         var meView = FindMeViewInChildren();
         if (meView != null)
         {
@@ -196,7 +199,8 @@ public class LeaderboardController : MonoBehaviour
             meView.AnimateScoreInt(meOldScore, meNewScore, dur, ease);
         }
 
-        const float meZOffset = 1.5f;
+        // Me'yi Z ekseninde hafif öne it
+        const float meZOffset = 1.25f;
         const float meZDuration = 0.25f;
 
         if (meView != null)
@@ -221,6 +225,7 @@ public class LeaderboardController : MonoBehaviour
         bool anyTween = false;
         _animSeq = DOTween.Sequence();
 
+        // Me sýrasý deðiþmediyse sadece hafif efekt + rebind gecikmesi
         if (deltaRows == 0)
         {
             if (meView != null)
@@ -233,10 +238,9 @@ public class LeaderboardController : MonoBehaviour
                                     .SetTarget(meView);
                     meZPushed = false;
                 }).SetTarget(meView);
-            }
 
-            if (meView != null)
                 meView.transform.DOPunchScale(Vector3.one * 0.06f, 0.25f, 6, 0.5f);
+            }
 
             DOTween.Kill(REBIND_DELAY_ID, false);
             DOTween.Sequence()
@@ -250,13 +254,14 @@ public class LeaderboardController : MonoBehaviour
             return;
         }
 
+        // Non-Me satýrlarý yeni pozisyonlarýna kaydýr
         for (int j = 0; j < vis; j++)
         {
             var view = GetViewAt(j);
             if (view == null) continue;
             if (view.isMe) continue;
 
-            float endY = -(j * rowHeight);
+            float endY = -(j * rowStep);
             _animSeq.Join(
                 view.transform
                     .DOLocalMoveY(endY, config.containerMoveDuration)
@@ -299,7 +304,7 @@ public class LeaderboardController : MonoBehaviour
         }
     }
 
-    // - tüm görünür satýrlarýn tweenlerini sonlandýr
+    // Tüm görünür satýrlarýn tweenlerini sonlandýr
     private void KillAllRowTweens(bool complete = false)
     {
         int vis = VisibleNow();
@@ -318,7 +323,7 @@ public class LeaderboardController : MonoBehaviour
         DOTween.Kill(REBIND_DELAY_ID, complete);
     }
 
-    // - animasyon öncesi yeni pencereye göre bind et ve baþlangýç Y konumlarýný ayarla
+    // Animasyon öncesi yeni pencereye göre bind et ve baþlangýç Y konumlarýný ayarla
     private void PrebindWindowForAnimation(int newTop, int deltaRows)
     {
         int vis = VisibleNow();
@@ -344,11 +349,12 @@ public class LeaderboardController : MonoBehaviour
             view.Bind(data, isMe);
 
             float startY = isMe
-                ? -(j * rowHeight)
-                : -((j - deltaRows) * rowHeight);
+                ? -(j * rowStep)
+                : -((j - deltaRows) * rowStep);
 
             view.SnapTo(startY);
 
+            // Üst üste binecek satýr için kýsa bir fade-in (non-Me)
             if (!isMe && j == jOverlap && jOverlap >= 0 && jOverlap < vis)
             {
                 view.SetAlpha(0f);
